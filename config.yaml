@@ -1,0 +1,35 @@
+# Configuration for NLP Pipeline Assignment
+# Using 20 Newsgroups dataset - FULL DATASET as per assignment
+
+dataset:
+  name: "20newsgroups"
+  subset: "all"  # Use full dataset as required
+  remove_headers: true
+  remove_footers: true
+  remove_quotes: true
+
+preprocessing:
+  use_spacy: false  # Set to true if you have spaCy installed
+  lemmatize: true
+  remove_numbers: true
+  remove_punctuation: true
+  min_token_length: 3
+  max_documents: 2000  # Process first 2000 for speed, increase for full dataset
+
+ngrams:
+  n_values: [1, 2, 3]  # Unigrams, Bigrams, Trigrams
+  smoothing: "laplace"  # Required: Implement one smoothing technique
+  top_k: 10  # Top 10 most informative bigrams
+  min_freq: 5
+
+pos:
+  patterns_to_extract: ["ADJ+NOUN", "NOUN+VERB"]  # Required patterns
+  top_n_words: 10  # Top 10 nouns, verbs, adjectives
+  compare_categories: ["comp.graphics", "rec.sport.baseball"]  # Tech vs Sports
+
+topic:
+  n_topics_range: [5, 8, 10]  # Required: Experiment with at least 3 values of K
+  max_features: 1000
+  min_df: 2
+  max_df: 0.95
+  compare_lda_nmf: true  # Bonus: Compare LDA with NMF
