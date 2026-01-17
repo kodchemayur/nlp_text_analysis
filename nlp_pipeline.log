@@ -8,3 +8,594 @@
 2026-01-17 20:21:37,373 - __main__ - INFO - LOADING 20 NEWSCROUPS DATASET (FULL DATASET)
 2026-01-17 20:21:37,373 - __main__ - INFO - ======================================================================
 2026-01-17 20:21:37,374 - preprocessing - INFO - Loading 20 Newsgroups dataset (FULL)...
+2026-01-17 20:21:39,550 - preprocessing - INFO -   rec.sport.hockey         :  999 documents
+2026-01-17 20:21:39,550 - preprocessing - INFO -   soc.religion.christian   :  997 documents
+2026-01-17 20:21:39,550 - preprocessing - INFO -   rec.motorcycles          :  996 documents
+2026-01-17 20:21:39,551 - preprocessing - INFO -   rec.sport.baseball       :  994 documents
+2026-01-17 20:21:39,551 - preprocessing - INFO -   sci.crypt                :  991 documents
+2026-01-17 20:21:39,551 - preprocessing - INFO -   sci.med                  :  990 documents
+2026-01-17 20:21:39,552 - preprocessing - INFO -   rec.autos                :  990 documents
+2026-01-17 20:21:39,552 - preprocessing - INFO -   comp.windows.x           :  988 documents
+2026-01-17 20:21:39,552 - preprocessing - INFO -   sci.space                :  987 documents
+2026-01-17 20:21:39,552 - preprocessing - INFO -   comp.os.ms-windows.misc  :  985 documents
+2026-01-17 20:21:39,552 - preprocessing - INFO -   sci.electronics          :  984 documents
+2026-01-17 20:21:39,553 - preprocessing - INFO -   comp.sys.ibm.pc.hardware :  982 documents
+2026-01-17 20:21:39,553 - preprocessing - INFO -   misc.forsale             :  975 documents
+2026-01-17 20:21:39,553 - preprocessing - INFO -   comp.graphics            :  973 documents
+2026-01-17 20:21:39,553 - preprocessing - INFO -   comp.sys.mac.hardware    :  963 documents
+2026-01-17 20:21:39,553 - preprocessing - INFO -   talk.politics.mideast    :  940 documents
+2026-01-17 20:21:39,554 - preprocessing - INFO -   talk.politics.guns       :  910 documents
+2026-01-17 20:21:39,554 - preprocessing - INFO -   alt.atheism              :  799 documents
+2026-01-17 20:21:39,554 - preprocessing - INFO -   talk.politics.misc       :  775 documents
+2026-01-17 20:21:39,554 - preprocessing - INFO -   talk.religion.misc       :  628 documents
+2026-01-17 20:21:39,560 - root - INFO - Results saved to output_20260117_202137/results\dataset_info.pkl
+2026-01-17 20:21:39,560 - __main__ - INFO - 
+======================================================================
+2026-01-17 20:21:39,561 - __main__ - INFO - PART 1: TEXT PREPROCESSING
+2026-01-17 20:21:39,561 - __main__ - INFO - ======================================================================
+2026-01-17 20:21:39,561 - __main__ - INFO - Tasks: Lowercasing, Tokenization, Stopword removal, Lemmatization
+2026-01-17 20:21:39,562 - preprocessing - INFO - Starting corpus preprocessing...
+2026-01-17 20:21:39,562 - preprocessing - INFO - Processing first 2000 documents for speed
+2026-01-17 20:21:39,562 - preprocessing - INFO - (Set max_documents higher in config.yaml for full dataset)
+2026-01-17 20:21:42,867 - preprocessing - INFO -   Processed 500/2000 documents
+2026-01-17 20:21:43,487 - preprocessing - INFO -   Processed 1000/2000 documents
+2026-01-17 20:21:44,087 - preprocessing - INFO -   Processed 1500/2000 documents
+2026-01-17 20:21:44,763 - preprocessing - INFO -   Documents processed: 1,945
+2026-01-17 20:21:44,764 - preprocessing - INFO -   Total tokens: 165,394
+2026-01-17 20:21:44,764 - preprocessing - INFO -   Average tokens per document: 85.0
+2026-01-17 20:21:44,765 - preprocessing - INFO -   Unique tokens: 22,734
+2026-01-17 20:21:44,822 - root - INFO - Results saved to output_20260117_202137/results\cleaned_corpus.pkl
+2026-01-17 20:21:44,852 - __main__ - INFO - 
+======================================================================
+2026-01-17 20:21:44,853 - __main__ - INFO - PART 2: N-GRAM LANGUAGE MODELING
+2026-01-17 20:21:44,853 - __main__ - INFO - ======================================================================
+2026-01-17 20:21:44,853 - __main__ - INFO - Tasks: Generate unigrams/bigrams/trigrams, frequency distributions
+2026-01-17 20:21:44,853 - __main__ - INFO -        Implement smoothing, calculate sentence probability
+2026-01-17 20:21:44,854 - __main__ - INFO -        Identify top 10 most informative bigrams
+2026-01-17 20:21:44,854 - ngrams - INFO - 
+Starting N-gram analysis...
+2026-01-17 20:21:44,872 - ngrams - INFO - Generating n-grams from 165,394 tokens...
+2026-01-17 20:21:44,873 - ngrams - INFO -   Generating 1-grams...
+2026-01-17 20:21:44,947 - ngrams - INFO -     Total 1-grams: 165,394
+2026-01-17 20:21:44,947 - ngrams - INFO -     Unique 1-grams: 22,734
+2026-01-17 20:21:44,948 - ngrams - INFO -   Generating 2-grams...
+2026-01-17 20:21:45,015 - ngrams - INFO -     Total 2-grams: 163,449
+2026-01-17 20:21:45,016 - ngrams - INFO -     Unique 2-grams: 142,131
+2026-01-17 20:21:45,016 - ngrams - INFO -   Generating 3-grams...
+2026-01-17 20:21:45,091 - ngrams - INFO -     Total 3-grams: 161,510
+2026-01-17 20:21:45,091 - ngrams - INFO -     Unique 3-grams: 157,637
+2026-01-17 20:21:45,101 - ngrams - INFO -   Top 5 1-grams:
+2026-01-17 20:21:45,102 - ngrams - INFO -     'people': 712
+2026-01-17 20:21:45,102 - ngrams - INFO -     'like': 665
+2026-01-17 20:21:45,102 - ngrams - INFO -     'know': 622
+2026-01-17 20:21:45,102 - ngrams - INFO -     'get': 611
+2026-01-17 20:21:45,102 - ngrams - INFO -     'think': 561
+2026-01-17 20:21:45,140 - ngrams - INFO -   Top 5 2-grams:
+2026-01-17 20:21:45,141 - ngrams - INFO -     'united state': 69
+2026-01-17 20:21:45,141 - ngrams - INFO -     'new york': 55
+2026-01-17 20:21:45,141 - ngrams - INFO -     'anyone know': 44
+2026-01-17 20:21:45,141 - ngrams - INFO -     'law enforcement': 41
+2026-01-17 20:21:45,142 - ngrams - INFO -     'thanks advance': 38
+2026-01-17 20:21:45,172 - ngrams - INFO -   Top 5 3-grams:
+2026-01-17 20:21:45,173 - ngrams - INFO -     'anti defamation league': 21
+2026-01-17 20:21:45,173 - ngrams - INFO -     'gif uci incoming': 18
+2026-01-17 20:21:45,173 - ngrams - INFO -     'uci incoming geode': 17
+2026-01-17 20:21:45,173 - ngrams - INFO -     'incoming geode gif': 17
+2026-01-17 20:21:45,174 - ngrams - INFO -     'geode gif uci': 17
+2026-01-17 20:21:45,190 - ngrams - INFO - Top 10 most informative bigrams (PMI):
+2026-01-17 20:21:45,191 - ngrams - INFO -    1. _agapate allelou_             : PMI = 10.418
+2026-01-17 20:21:45,191 - ngrams - INFO -    2. marijuana cocaine             : PMI = 10.418
+2026-01-17 20:21:45,191 - ngrams - INFO -    3. diffie hellman                : PMI = 10.418
+2026-01-17 20:21:45,191 - ngrams - INFO -    4. deir yassin                   : PMI = 10.236
+2026-01-17 20:21:45,192 - ngrams - INFO -    5. physik unizh                  : PMI = 10.236
+2026-01-17 20:21:45,192 - ngrams - INFO -    6. adaptive optic                : PMI = 10.082
+2026-01-17 20:21:45,192 - ngrams - INFO -    7. copper bracelet               : PMI = 10.082
+2026-01-17 20:21:45,192 - ngrams - INFO -    8. saudi arabia                  : PMI = 10.054
+2026-01-17 20:21:45,193 - ngrams - INFO -    9. njxp skepticism               : PMI = 9.948
+2026-01-17 20:21:45,193 - ngrams - INFO -   10. intellect shameful            : PMI = 9.948
+2026-01-17 20:21:45,199 - ngrams - INFO - 
+Sentence probabilities (using bigrams with smoothing):
+2026-01-17 20:21:45,199 - ngrams - INFO -   'computer graphics image processing': 3.13e-26
+2026-01-17 20:21:45,200 - ngrams - INFO -   'space shuttle mission nasa': 1.21e-25
+2026-01-17 20:21:45,200 - ngrams - INFO -   'baseball game team players': 8.94e-27
+2026-01-17 20:21:45,200 - ngrams - INFO -   'medical research patient treatment': 8.94e-27
+2026-01-17 20:21:45,200 - ngrams - INFO -   'government political policy decision': 8.94e-27
+2026-01-17 20:21:45,203 - ngrams - INFO -   Vocabulary size: 22,734
+2026-01-17 20:21:45,203 - ngrams - INFO -   Total tokens: 165,394
+2026-01-17 20:21:45,204 - ngrams - INFO -   Smoothing technique: laplace
+2026-01-17 20:21:45,439 - root - INFO - Results saved to output_20260117_202137/results\ngram_results.pkl
+2026-01-17 20:21:45,440 - ngrams - INFO - 
+Generating n-gram visualizations...
+2026-01-17 20:21:47,349 - __main__ - INFO -   Vocabulary size: 22,734
+2026-01-17 20:21:47,349 - __main__ - INFO -   Top informative bigrams saved
+2026-01-17 20:21:47,349 - __main__ - INFO - 
+======================================================================
+2026-01-17 20:21:47,349 - __main__ - INFO - PART 3: POS TAGGING
+2026-01-17 20:21:47,349 - __main__ - INFO - ======================================================================
+2026-01-17 20:21:47,350 - __main__ - INFO - Tasks: Apply POS tagging, compute POS distribution
+2026-01-17 20:21:47,350 - __main__ - INFO -        Top 10 nouns/verbs/adjectives, extract POS patterns
+2026-01-17 20:21:47,350 - __main__ - INFO -        Compare POS distributions across categories
+2026-01-17 20:21:47,351 - pos_analysis - WARNING - spaCy not available, using NLTK for POS tagging
+2026-01-17 20:21:47,352 - pos_analysis - INFO - 
+Starting POS analysis...
+2026-01-17 20:21:47,352 - pos_analysis - INFO - POS tagging 500 documents...
+2026-01-17 20:21:47,926 - pos_analysis - INFO -   Tagged 100/500 documents
+2026-01-17 20:21:48,260 - pos_analysis - INFO -   Tagged 200/500 documents
+2026-01-17 20:21:48,669 - pos_analysis - INFO -   Tagged 300/500 documents
+2026-01-17 20:21:49,061 - pos_analysis - INFO -   Tagged 400/500 documents
+2026-01-17 20:21:49,576 - pos_analysis - INFO - Analyzing category: comp.graphics (index: 1)
+2026-01-17 20:21:49,579 - pos_analysis - INFO -   Processing 100 documents for comp.graphics
+2026-01-17 20:21:49,579 - pos_analysis - INFO - POS tagging 100 documents...
+2026-01-17 20:21:50,064 - pos_analysis - INFO - Analyzing category: rec.sport.baseball (index: 9)
+2026-01-17 20:21:50,067 - pos_analysis - INFO -   Processing 97 documents for rec.sport.baseball
+2026-01-17 20:21:50,067 - pos_analysis - INFO - POS tagging 97 documents...
+2026-01-17 20:21:50,624 - pos_analysis - INFO -   Tagged documents: 500
+2026-01-17 20:21:50,624 - pos_analysis - INFO -   Total POS tags: 36,643
+2026-01-17 20:21:50,624 - pos_analysis - INFO -   POS tagger used: NLTK
+2026-01-17 20:21:50,625 - pos_analysis - INFO - 
+Top 10 POS tags:
+2026-01-17 20:21:50,625 - pos_analysis - INFO -   NOUN      :   18,615
+2026-01-17 20:21:50,625 - pos_analysis - INFO -   ADJ       :    7,803
+2026-01-17 20:21:50,625 - pos_analysis - INFO -   VERB      :    6,592
+2026-01-17 20:21:50,625 - pos_analysis - INFO -   ADV       :    2,311
+2026-01-17 20:21:50,625 - pos_analysis - INFO -   ADP       :      728
+2026-01-17 20:21:50,626 - pos_analysis - INFO -   X         :      364
+2026-01-17 20:21:50,626 - pos_analysis - INFO -   DET       :      103
+2026-01-17 20:21:50,626 - pos_analysis - INFO -   NUM       :       81
+2026-01-17 20:21:50,626 - pos_analysis - INFO -   CONJ      :       46
+2026-01-17 20:21:50,630 - root - INFO - Results saved to output_20260117_202137/results\pos_results.pkl
+2026-01-17 20:21:50,630 - pos_analysis - INFO - 
+Generating POS visualizations...
+2026-01-17 20:21:52,964 - __main__ - INFO - 
+======================================================================
+2026-01-17 20:21:52,964 - __main__ - INFO - PART 4: TOPIC MODELING
+2026-01-17 20:21:52,964 - __main__ - INFO - ======================================================================
+2026-01-17 20:21:52,964 - __main__ - INFO - Tasks: Convert to document-term matrix, apply LDA
+2026-01-17 20:21:52,965 - __main__ - INFO -        Experiment with 3 values of K, list top 10 words per topic
+2026-01-17 20:21:52,965 - __main__ - INFO -        Assign dominant topic, visualize topics
+2026-01-17 20:21:52,965 - __main__ - INFO -        BONUS: Compare LDA with NMF
+2026-01-17 20:21:52,965 - topic_modeling - INFO - 
+Starting Topic Modeling analysis...
+2026-01-17 20:21:52,965 - topic_modeling - INFO - Creating document-term matrix...
+2026-01-17 20:21:53,125 - topic_modeling - INFO - 
+Finding optimal number of topics (experimenting with 3 K values)...
+2026-01-17 20:21:53,125 - topic_modeling - INFO - Training LDA with 5 topics...
+2026-01-17 20:22:00,736 - gensim.corpora.dictionary - INFO - adding document #0 to Dictionary<0 unique tokens: []>
+2026-01-17 20:22:00,775 - gensim.corpora.dictionary - INFO - built Dictionary<9195 unique tokens: ['actually', 'anyway', 'bashers', 'beat', 'better']...> from 500 documents (total 36643 corpus positions)
+2026-01-17 20:22:00,795 - gensim.utils - INFO - Dictionary lifecycle event {'msg': "built Dictionary<9195 unique tokens: ['actually', 'anyway', 'bashers', 'beat', 'better']...> from 500 documents (total 36643 corpus positions)", 'datetime': '2026-01-17T20:22:00.775551', 'gensim': '4.4.0', 'python': '3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]', 'platform': 'Windows-10-10.0.19045-SP0', 'event': 'created'}
+2026-01-17 20:22:00,821 - gensim.models.ldamodel - INFO - using autotuned alpha, starting with [np.float32(0.2), np.float32(0.2), np.float32(0.2), np.float32(0.2), np.float32(0.2)]
+2026-01-17 20:22:00,821 - gensim.models.ldamodel - INFO - using symmetric eta at 0.2
+2026-01-17 20:22:00,823 - gensim.models.ldamodel - INFO - using serial LDA version on this node
+2026-01-17 20:22:00,828 - gensim.models.ldamodel - INFO - running online (multi-pass) LDA training, 5 topics, 10 passes over the supplied corpus of 500 documents, updating model once every 500 documents, evaluating perplexity every 500 documents, iterating 50x with a convergence threshold of 0.001000
+2026-01-17 20:22:01,224 - gensim.models.ldamodel - INFO - -10.529 per-word bound, 1477.7 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:22:01,224 - gensim.models.ldamodel - INFO - PROGRESS: pass 0, at document #500/500
+2026-01-17 20:22:01,527 - gensim.models.ldamodel - INFO - optimized alpha [np.float32(0.22107044), np.float32(0.21136652), np.float32(0.207208), np.float32(0.22347257), np.float32(0.20366642)]
+2026-01-17 20:22:01,533 - gensim.models.ldamodel - INFO - topic #0 (0.221): 0.004*"think" + 0.003*"know" + 0.003*"system" + 0.003*"law" + 0.003*"say" + 0.003*"way" + 0.003*"used" + 0.003*"make" + 0.003*"chip" + 0.003*"like"
+2026-01-17 20:22:01,534 - gensim.models.ldamodel - INFO - topic #1 (0.211): 0.004*"people" + 0.003*"file" + 0.003*"det" + 0.003*"new" + 0.003*"nyr" + 0.003*"like" + 0.003*"work" + 0.003*"get" + 0.003*"tor" + 0.003*"bos"
+2026-01-17 20:22:01,534 - gensim.models.ldamodel - INFO - topic #2 (0.207): 0.005*"people" + 0.004*"key" + 0.003*"get" + 0.003*"know" + 0.003*"think" + 0.003*"use" + 0.003*"make" + 0.003*"way" + 0.003*"like" + 0.002*"file"
+2026-01-17 20:22:01,534 - gensim.models.ldamodel - INFO - topic #3 (0.223): 0.005*"know" + 0.004*"like" + 0.004*"people" + 0.003*"get" + 0.003*"problem" + 0.003*"make" + 0.003*"say" + 0.003*"use" + 0.003*"well" + 0.003*"please"
+2026-01-17 20:22:01,535 - gensim.models.ldamodel - INFO - topic #4 (0.204): 0.004*"like" + 0.004*"well" + 0.003*"make" + 0.003*"know" + 0.003*"think" + 0.003*"people" + 0.003*"law" + 0.003*"get" + 0.002*"use" + 0.002*"thing"
+2026-01-17 20:22:01,535 - gensim.models.ldamodel - INFO - topic diff=2.047603, rho=1.000000
+2026-01-17 20:22:01,801 - gensim.models.ldamodel - INFO - -8.972 per-word bound, 502.2 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:22:01,801 - gensim.models.ldamodel - INFO - PROGRESS: pass 1, at document #500/500
+2026-01-17 20:22:01,964 - gensim.models.ldamodel - INFO - optimized alpha [np.float32(0.15240118), np.float32(0.1376831), np.float32(0.13205892), np.float32(0.14459716), np.float32(0.12812799)]
+2026-01-17 20:22:01,968 - gensim.models.ldamodel - INFO - topic #0 (0.152): 0.004*"law" + 0.004*"system" + 0.003*"chip" + 0.003*"say" + 0.003*"think" + 0.003*"used" + 0.003*"know" + 0.003*"god" + 0.003*"use" + 0.003*"way"
+2026-01-17 20:22:01,969 - gensim.models.ldamodel - INFO - topic #1 (0.138): 0.004*"det" + 0.004*"people" + 0.004*"nyr" + 0.004*"file" + 0.004*"tor" + 0.003*"bos" + 0.003*"new" + 0.003*"like" + 0.003*"mtl" + 0.003*"get"
+2026-01-17 20:22:01,969 - gensim.models.ldamodel - INFO - topic #2 (0.132): 0.005*"people" + 0.004*"key" + 0.003*"get" + 0.003*"think" + 0.003*"know" + 0.003*"make" + 0.003*"way" + 0.003*"like" + 0.002*"use" + 0.002*"new"
+2026-01-17 20:22:01,970 - gensim.models.ldamodel - INFO - topic #3 (0.145): 0.004*"know" + 0.004*"people" + 0.004*"like" + 0.003*"problem" + 0.003*"make" + 0.003*"get" + 0.003*"say" + 0.003*"christian" + 0.003*"jesus" + 0.003*"need"
+2026-01-17 20:22:01,970 - gensim.models.ldamodel - INFO - topic #4 (0.128): 0.004*"like" + 0.003*"make" + 0.003*"know" + 0.003*"well" + 0.003*"think" + 0.003*"window" + 0.003*"get" + 0.003*"use" + 0.002*"thing" + 0.002*"people"
+2026-01-17 20:22:01,971 - gensim.models.ldamodel - INFO - topic diff=0.632284, rho=0.577350
+2026-01-17 20:22:02,196 - gensim.models.ldamodel - INFO - -8.722 per-word bound, 422.3 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:22:02,196 - gensim.models.ldamodel - INFO - PROGRESS: pass 2, at document #500/500
+2026-01-17 20:22:02,312 - gensim.models.ldamodel - INFO - optimized alpha [np.float32(0.120496735), np.float32(0.105874024), np.float32(0.10105221), np.float32(0.11209428), np.float32(0.09856179)]
+2026-01-17 20:22:02,317 - gensim.models.ldamodel - INFO - topic #0 (0.120): 0.004*"law" + 0.004*"system" + 0.004*"say" + 0.004*"chip" + 0.003*"god" + 0.003*"think" + 0.003*"use" + 0.003*"used" + 0.003*"key" + 0.003*"way"
+2026-01-17 20:22:02,317 - gensim.models.ldamodel - INFO - topic #1 (0.106): 0.004*"det" + 0.004*"people" + 0.004*"nyr" + 0.004*"tor" + 0.004*"file" + 0.004*"bos" + 0.003*"mtl" + 0.003*"new" + 0.003*"like" + 0.003*"chi"
+2026-01-17 20:22:02,318 - gensim.models.ldamodel - INFO - topic #2 (0.101): 0.005*"people" + 0.004*"key" + 0.003*"think" + 0.003*"get" + 0.003*"know" + 0.003*"make" + 0.003*"istanbul" + 0.003*"armenian" + 0.003*"like" + 0.003*"new"
+2026-01-17 20:22:02,318 - gensim.models.ldamodel - INFO - topic #3 (0.112): 0.004*"people" + 0.004*"know" + 0.004*"like" + 0.003*"christian" + 0.003*"say" + 0.003*"make" + 0.003*"problem" + 0.003*"jesus" + 0.003*"get" + 0.003*"need"
+2026-01-17 20:22:02,319 - gensim.models.ldamodel - INFO - topic #4 (0.099): 0.004*"like" + 0.004*"know" + 0.003*"make" + 0.003*"window" + 0.003*"think" + 0.003*"well" + 0.003*"get" + 0.003*"thing" + 0.002*"way" + 0.002*"use"
+2026-01-17 20:22:02,319 - gensim.models.ldamodel - INFO - topic diff=0.380363, rho=0.500000
+2026-01-17 20:22:02,530 - gensim.models.ldamodel - INFO - -8.639 per-word bound, 398.5 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:22:02,530 - gensim.models.ldamodel - INFO - PROGRESS: pass 3, at document #500/500
+2026-01-17 20:22:02,645 - gensim.models.ldamodel - INFO - optimized alpha [np.float32(0.10267922), np.float32(0.088244975), np.float32(0.08438471), np.float32(0.09451764), np.float32(0.08243132)]
+2026-01-17 20:22:02,650 - gensim.models.ldamodel - INFO - topic #0 (0.103): 0.004*"law" + 0.004*"system" + 0.004*"say" + 0.004*"chip" + 0.003*"god" + 0.003*"think" + 0.003*"use" + 0.003*"key" + 0.003*"used" + 0.003*"way"
+2026-01-17 20:22:02,650 - gensim.models.ldamodel - INFO - topic #1 (0.088): 0.005*"det" + 0.004*"people" + 0.004*"nyr" + 0.004*"tor" + 0.004*"file" + 0.004*"bos" + 0.003*"mtl" + 0.003*"new" + 0.003*"like" + 0.003*"chi"
+2026-01-17 20:22:02,650 - gensim.models.ldamodel - INFO - topic #2 (0.084): 0.005*"people" + 0.004*"key" + 0.003*"know" + 0.003*"think" + 0.003*"get" + 0.003*"istanbul" + 0.003*"make" + 0.003*"armenian" + 0.003*"new" + 0.003*"like"
+2026-01-17 20:22:02,651 - gensim.models.ldamodel - INFO - topic #3 (0.095): 0.004*"people" + 0.004*"know" + 0.004*"like" + 0.004*"christian" + 0.003*"jesus" + 0.003*"say" + 0.003*"make" + 0.003*"problem" + 0.003*"get" + 0.003*"commandment"
+2026-01-17 20:22:02,651 - gensim.models.ldamodel - INFO - topic #4 (0.082): 0.004*"like" + 0.004*"know" + 0.003*"make" + 0.003*"window" + 0.003*"think" + 0.003*"get" + 0.003*"well" + 0.003*"way" + 0.003*"thing" + 0.003*"work"
+2026-01-17 20:22:02,652 - gensim.models.ldamodel - INFO - topic diff=0.234201, rho=0.447214
+2026-01-17 20:22:02,879 - gensim.models.ldamodel - INFO - -8.605 per-word bound, 389.5 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:22:02,879 - gensim.models.ldamodel - INFO - PROGRESS: pass 4, at document #500/500
+2026-01-17 20:22:02,986 - gensim.models.ldamodel - INFO - optimized alpha [np.float32(0.09110927), np.float32(0.07692083), np.float32(0.07368418), np.float32(0.08313812), np.float32(0.072160766)]
+2026-01-17 20:22:02,991 - gensim.models.ldamodel - INFO - topic #0 (0.091): 0.004*"law" + 0.004*"system" + 0.004*"say" + 0.004*"chip" + 0.003*"god" + 0.003*"use" + 0.003*"think" + 0.003*"key" + 0.003*"used" + 0.003*"way"
+2026-01-17 20:22:02,991 - gensim.models.ldamodel - INFO - topic #1 (0.077): 0.005*"det" + 0.004*"people" + 0.004*"nyr" + 0.004*"tor" + 0.004*"file" + 0.004*"bos" + 0.003*"mtl" + 0.003*"new" + 0.003*"chi" + 0.003*"like"
+2026-01-17 20:22:02,991 - gensim.models.ldamodel - INFO - topic #2 (0.074): 0.005*"people" + 0.004*"key" + 0.003*"know" + 0.003*"think" + 0.003*"get" + 0.003*"istanbul" + 0.003*"make" + 0.003*"armenian" + 0.003*"new" + 0.003*"like"
+2026-01-17 20:22:02,992 - gensim.models.ldamodel - INFO - topic #3 (0.083): 0.004*"people" + 0.004*"know" + 0.004*"like" + 0.004*"christian" + 0.003*"jesus" + 0.003*"say" + 0.003*"make" + 0.003*"commandment" + 0.003*"problem" + 0.003*"get"
+2026-01-17 20:22:02,993 - gensim.models.ldamodel - INFO - topic #4 (0.072): 0.004*"like" + 0.004*"know" + 0.003*"make" + 0.003*"window" + 0.003*"think" + 0.003*"get" + 0.003*"well" + 0.003*"way" + 0.003*"work" + 0.003*"thing"
+2026-01-17 20:22:02,993 - gensim.models.ldamodel - INFO - topic diff=0.147988, rho=0.408248
+2026-01-17 20:22:03,198 - gensim.models.ldamodel - INFO - -8.590 per-word bound, 385.3 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:22:03,198 - gensim.models.ldamodel - INFO - PROGRESS: pass 5, at document #500/500
+2026-01-17 20:22:03,303 - gensim.models.ldamodel - INFO - optimized alpha [np.float32(0.08283155), np.float32(0.06887313), np.float32(0.06616054), np.float32(0.07512458), np.float32(0.0648436)]
+2026-01-17 20:22:03,308 - gensim.models.ldamodel - INFO - topic #0 (0.083): 0.004*"law" + 0.004*"system" + 0.004*"say" + 0.004*"chip" + 0.003*"god" + 0.003*"use" + 0.003*"key" + 0.003*"think" + 0.003*"used" + 0.003*"way"
+2026-01-17 20:22:03,309 - gensim.models.ldamodel - INFO - topic #1 (0.069): 0.005*"det" + 0.004*"people" + 0.004*"nyr" + 0.004*"tor" + 0.004*"file" + 0.004*"bos" + 0.003*"mtl" + 0.003*"new" + 0.003*"chi" + 0.003*"like"
+2026-01-17 20:22:03,309 - gensim.models.ldamodel - INFO - topic #2 (0.066): 0.005*"people" + 0.004*"key" + 0.003*"know" + 0.003*"think" + 0.003*"get" + 0.003*"istanbul" + 0.003*"armenian" + 0.003*"make" + 0.003*"new" + 0.003*"like"
+2026-01-17 20:22:03,310 - gensim.models.ldamodel - INFO - topic #3 (0.075): 0.004*"people" + 0.004*"know" + 0.004*"like" + 0.004*"christian" + 0.003*"jesus" + 0.003*"say" + 0.003*"make" + 0.003*"commandment" + 0.003*"problem" + 0.003*"get"
+2026-01-17 20:22:03,311 - gensim.models.ldamodel - INFO - topic #4 (0.065): 0.004*"like" + 0.004*"know" + 0.003*"make" + 0.003*"window" + 0.003*"get" + 0.003*"think" + 0.003*"way" + 0.003*"well" + 0.003*"work" + 0.003*"thing"
+2026-01-17 20:22:03,311 - gensim.models.ldamodel - INFO - topic diff=0.095920, rho=0.377964
+2026-01-17 20:22:03,521 - gensim.models.ldamodel - INFO - -8.582 per-word bound, 383.2 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:22:03,522 - gensim.models.ldamodel - INFO - PROGRESS: pass 6, at document #500/500
+2026-01-17 20:22:03,626 - gensim.models.ldamodel - INFO - optimized alpha [np.float32(0.0765469), np.float32(0.06283876), np.float32(0.060479134), np.float32(0.06904883), np.float32(0.059303004)]
+2026-01-17 20:22:03,631 - gensim.models.ldamodel - INFO - topic #0 (0.077): 0.004*"law" + 0.004*"system" + 0.004*"say" + 0.004*"chip" + 0.003*"god" + 0.003*"use" + 0.003*"key" + 0.003*"think" + 0.003*"used" + 0.003*"like"
+2026-01-17 20:22:03,631 - gensim.models.ldamodel - INFO - topic #1 (0.063): 0.005*"det" + 0.004*"people" + 0.004*"nyr" + 0.004*"tor" + 0.004*"bos" + 0.004*"file" + 0.004*"mtl" + 0.003*"new" + 0.003*"chi" + 0.003*"like"
+2026-01-17 20:22:03,632 - gensim.models.ldamodel - INFO - topic #2 (0.060): 0.005*"people" + 0.004*"key" + 0.003*"know" + 0.003*"think" + 0.003*"get" + 0.003*"istanbul" + 0.003*"armenian" + 0.003*"make" + 0.003*"new" + 0.003*"like"
+2026-01-17 20:22:03,632 - gensim.models.ldamodel - INFO - topic #3 (0.069): 0.004*"people" + 0.004*"know" + 0.004*"like" + 0.004*"christian" + 0.004*"jesus" + 0.003*"say" + 0.003*"commandment" + 0.003*"make" + 0.003*"anyone" + 0.003*"get"
+2026-01-17 20:22:03,633 - gensim.models.ldamodel - INFO - topic #4 (0.059): 0.004*"like" + 0.004*"know" + 0.003*"make" + 0.003*"window" + 0.003*"get" + 0.003*"think" + 0.003*"way" + 0.003*"well" + 0.003*"work" + 0.002*"thing"
+2026-01-17 20:22:03,633 - gensim.models.ldamodel - INFO - topic diff=0.063649, rho=0.353553
+2026-01-17 20:22:03,858 - gensim.models.ldamodel - INFO - -8.577 per-word bound, 381.9 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:22:03,859 - gensim.models.ldamodel - INFO - PROGRESS: pass 7, at document #500/500
+2026-01-17 20:22:03,956 - gensim.models.ldamodel - INFO - optimized alpha [np.float32(0.07153448), np.float32(0.05820165), np.float32(0.056004897), np.float32(0.06424739), np.float32(0.054931685)]
+2026-01-17 20:22:03,961 - gensim.models.ldamodel - INFO - topic #0 (0.072): 0.004*"law" + 0.004*"system" + 0.004*"say" + 0.004*"chip" + 0.003*"god" + 0.003*"use" + 0.003*"key" + 0.003*"think" + 0.003*"used" + 0.003*"like"
+2026-01-17 20:22:03,962 - gensim.models.ldamodel - INFO - topic #1 (0.058): 0.005*"det" + 0.004*"people" + 0.004*"nyr" + 0.004*"tor" + 0.004*"bos" + 0.004*"file" + 0.004*"mtl" + 0.003*"new" + 0.003*"chi" + 0.003*"like"
+2026-01-17 20:22:03,962 - gensim.models.ldamodel - INFO - topic #2 (0.056): 0.005*"people" + 0.004*"key" + 0.004*"know" + 0.003*"think" + 0.003*"get" + 0.003*"istanbul" + 0.003*"armenian" + 0.003*"make" + 0.003*"new" + 0.003*"like"
+2026-01-17 20:22:03,962 - gensim.models.ldamodel - INFO - topic #3 (0.064): 0.004*"people" + 0.004*"know" + 0.004*"like" + 0.004*"christian" + 0.004*"jesus" + 0.003*"say" + 0.003*"commandment" + 0.003*"make" + 0.003*"anyone" + 0.003*"get"
+2026-01-17 20:22:03,963 - gensim.models.ldamodel - INFO - topic #4 (0.055): 0.004*"like" + 0.004*"know" + 0.003*"make" + 0.003*"window" + 0.003*"get" + 0.003*"think" + 0.003*"way" + 0.003*"well" + 0.003*"work" + 0.002*"thing"
+2026-01-17 20:22:03,963 - gensim.models.ldamodel - INFO - topic diff=0.043252, rho=0.333333
+2026-01-17 20:22:04,176 - gensim.models.ldamodel - INFO - -8.574 per-word bound, 381.1 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:22:04,176 - gensim.models.ldamodel - INFO - PROGRESS: pass 8, at document #500/500
+2026-01-17 20:22:04,276 - gensim.models.ldamodel - INFO - optimized alpha [np.float32(0.06741255), np.float32(0.054442596), np.float32(0.052366), np.float32(0.06028643), np.float32(0.051371694)]
+2026-01-17 20:22:04,281 - gensim.models.ldamodel - INFO - topic #0 (0.067): 0.004*"law" + 0.004*"system" + 0.004*"say" + 0.004*"chip" + 0.003*"god" + 0.003*"use" + 0.003*"key" + 0.003*"think" + 0.003*"used" + 0.003*"like"
+2026-01-17 20:22:04,281 - gensim.models.ldamodel - INFO - topic #1 (0.054): 0.005*"det" + 0.004*"people" + 0.004*"nyr" + 0.004*"tor" + 0.004*"bos" + 0.004*"file" + 0.004*"mtl" + 0.003*"new" + 0.003*"chi" + 0.003*"like"
+2026-01-17 20:22:04,282 - gensim.models.ldamodel - INFO - topic #2 (0.052): 0.005*"people" + 0.004*"key" + 0.004*"know" + 0.003*"think" + 0.003*"get" + 0.003*"istanbul" + 0.003*"armenian" + 0.003*"make" + 0.003*"new" + 0.003*"like"
+2026-01-17 20:22:04,282 - gensim.models.ldamodel - INFO - topic #3 (0.060): 0.004*"people" + 0.004*"know" + 0.004*"like" + 0.004*"christian" + 0.004*"jesus" + 0.003*"say" + 0.003*"commandment" + 0.003*"make" + 0.003*"anyone" + 0.003*"get"
+2026-01-17 20:22:04,283 - gensim.models.ldamodel - INFO - topic #4 (0.051): 0.004*"like" + 0.004*"know" + 0.003*"make" + 0.003*"window" + 0.003*"get" + 0.003*"think" + 0.003*"way" + 0.003*"well" + 0.003*"work" + 0.002*"thing"
+2026-01-17 20:22:04,283 - gensim.models.ldamodel - INFO - topic diff=0.030152, rho=0.316228
+2026-01-17 20:22:04,500 - gensim.models.ldamodel - INFO - -8.572 per-word bound, 380.6 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:22:04,500 - gensim.models.ldamodel - INFO - PROGRESS: pass 9, at document #500/500
+2026-01-17 20:22:04,601 - gensim.models.ldamodel - INFO - optimized alpha [np.float32(0.06403346), np.float32(0.051221818), np.float32(0.049339067), np.float32(0.05705351), np.float32(0.048406806)]
+2026-01-17 20:22:04,605 - gensim.models.ldamodel - INFO - topic #0 (0.064): 0.004*"law" + 0.004*"system" + 0.004*"say" + 0.004*"chip" + 0.003*"god" + 0.003*"use" + 0.003*"key" + 0.003*"think" + 0.003*"used" + 0.003*"like"
+2026-01-17 20:22:04,606 - gensim.models.ldamodel - INFO - topic #1 (0.051): 0.005*"det" + 0.004*"people" + 0.004*"nyr" + 0.004*"tor" + 0.004*"file" + 0.004*"bos" + 0.004*"mtl" + 0.003*"new" + 0.003*"chi" + 0.003*"like"
+2026-01-17 20:22:04,606 - gensim.models.ldamodel - INFO - topic #2 (0.049): 0.005*"people" + 0.004*"key" + 0.004*"know" + 0.003*"think" + 0.003*"get" + 0.003*"istanbul" + 0.003*"armenian" + 0.003*"make" + 0.003*"new" + 0.003*"like"
+2026-01-17 20:22:04,607 - gensim.models.ldamodel - INFO - topic #3 (0.057): 0.004*"people" + 0.004*"know" + 0.004*"like" + 0.004*"christian" + 0.004*"jesus" + 0.003*"say" + 0.003*"commandment" + 0.003*"make" + 0.003*"anyone" + 0.003*"get"
+2026-01-17 20:22:04,607 - gensim.models.ldamodel - INFO - topic #4 (0.048): 0.004*"like" + 0.004*"know" + 0.004*"make" + 0.003*"window" + 0.003*"get" + 0.003*"think" + 0.003*"way" + 0.003*"well" + 0.003*"work" + 0.002*"thing"
+2026-01-17 20:22:04,607 - gensim.models.ldamodel - INFO - topic diff=0.021578, rho=0.301511
+2026-01-17 20:22:04,608 - gensim.utils - INFO - LdaModel lifecycle event {'msg': 'trained LdaModel<num_terms=9195, num_topics=5, decay=0.5, chunksize=2000> in 3.78s', 'datetime': '2026-01-17T20:22:04.608227', 'gensim': '4.4.0', 'python': '3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]', 'platform': 'Windows-10-10.0.19045-SP0', 'event': 'created'}
+2026-01-17 20:22:04,609 - gensim.topic_coherence.probability_estimation - INFO - using ParallelWordOccurrenceAccumulator<processes=7, batch_size=64> to estimate probabilities from sliding windows
+2026-01-17 20:22:55,698 - gensim.topic_coherence.text_analysis - INFO - 7 accumulators retrieved from output queue
+2026-01-17 20:22:55,705 - gensim.topic_coherence.text_analysis - INFO - accumulated word occurrence stats for 12120 virtual documents
+2026-01-17 20:22:55,912 - topic_modeling - INFO -   K= 5: Coherence = 0.3991
+2026-01-17 20:22:55,913 - topic_modeling - INFO - Training LDA with 8 topics...
+2026-01-17 20:23:04,100 - gensim.corpora.dictionary - INFO - adding document #0 to Dictionary<0 unique tokens: []>
+2026-01-17 20:23:04,142 - gensim.corpora.dictionary - INFO - built Dictionary<9195 unique tokens: ['actually', 'anyway', 'bashers', 'beat', 'better']...> from 500 documents (total 36643 corpus positions)
+2026-01-17 20:23:04,143 - gensim.utils - INFO - Dictionary lifecycle event {'msg': "built Dictionary<9195 unique tokens: ['actually', 'anyway', 'bashers', 'beat', 'better']...> from 500 documents (total 36643 corpus positions)", 'datetime': '2026-01-17T20:23:04.143294', 'gensim': '4.4.0', 'python': '3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]', 'platform': 'Windows-10-10.0.19045-SP0', 'event': 'created'}
+2026-01-17 20:23:04,166 - gensim.models.ldamodel - INFO - using autotuned alpha, starting with [np.float32(0.125), np.float32(0.125), np.float32(0.125), np.float32(0.125), np.float32(0.125), np.float32(0.125), np.float32(0.125), np.float32(0.125)]
+2026-01-17 20:23:04,166 - gensim.models.ldamodel - INFO - using symmetric eta at 0.125
+2026-01-17 20:23:04,167 - gensim.models.ldamodel - INFO - using serial LDA version on this node
+2026-01-17 20:23:04,174 - gensim.models.ldamodel - INFO - running online (multi-pass) LDA training, 8 topics, 10 passes over the supplied corpus of 500 documents, updating model once every 500 documents, evaluating perplexity every 500 documents, iterating 50x with a convergence threshold of 0.001000
+2026-01-17 20:23:04,581 - gensim.models.ldamodel - INFO - -11.676 per-word bound, 3271.5 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:23:04,581 - gensim.models.ldamodel - INFO - PROGRESS: pass 0, at document #500/500
+2026-01-17 20:23:04,861 - gensim.models.ldamodel - INFO - optimized alpha [np.float32(0.12850495), np.float32(0.117524594), np.float32(0.12277494), np.float32(0.125903), np.float32(0.12302941), np.float32(0.12499501), np.float32(0.12661088), np.float32(0.13069864)]
+2026-01-17 20:23:04,871 - gensim.models.ldamodel - INFO - topic #1 (0.118): 0.004*"people" + 0.003*"like" + 0.003*"file" + 0.003*"det" + 0.003*"nyr" + 0.003*"think" + 0.003*"bos" + 0.003*"get" + 0.003*"tor" + 0.003*"know"
+2026-01-17 20:23:04,871 - gensim.models.ldamodel - INFO - topic #2 (0.123): 0.006*"people" + 0.003*"know" + 0.003*"make" + 0.003*"get" + 0.003*"think" + 0.003*"like" + 0.002*"way" + 0.002*"say" + 0.002*"thing" + 0.002*"god"
+2026-01-17 20:23:04,872 - gensim.models.ldamodel - INFO - topic #6 (0.127): 0.005*"file" + 0.005*"key" + 0.004*"get" + 0.004*"uci" + 0.004*"gif" + 0.004*"incoming" + 0.003*"xterm" + 0.003*"may" + 0.003*"people" + 0.003*"say"
+2026-01-17 20:23:04,872 - gensim.models.ldamodel - INFO - topic #0 (0.129): 0.004*"law" + 0.004*"know" + 0.003*"think" + 0.003*"system" + 0.003*"make" + 0.003*"say" + 0.003*"way" + 0.003*"like" + 0.003*"chip" + 0.003*"god"
+2026-01-17 20:23:04,873 - gensim.models.ldamodel - INFO - topic #7 (0.131): 0.005*"use" + 0.004*"problem" + 0.004*"think" + 0.003*"work" + 0.003*"get" + 0.003*"system" + 0.003*"bit" + 0.003*"say" + 0.003*"key" + 0.003*"need"
+2026-01-17 20:23:04,873 - gensim.models.ldamodel - INFO - topic diff=3.520278, rho=1.000000
+2026-01-17 20:23:05,165 - gensim.models.ldamodel - INFO - -9.275 per-word bound, 619.6 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:23:05,165 - gensim.models.ldamodel - INFO - PROGRESS: pass 1, at document #500/500
+2026-01-17 20:23:05,310 - gensim.models.ldamodel - INFO - optimized alpha [np.float32(0.102459975), np.float32(0.09095754), np.float32(0.092612065), np.float32(0.100971244), np.float32(0.09201206), np.float32(0.09700766), np.float32(0.09753406), np.float32(0.107225955)]
+2026-01-17 20:23:05,318 - gensim.models.ldamodel - INFO - topic #1 (0.091): 0.006*"det" + 0.005*"nyr" + 0.005*"tor" + 0.004*"bos" + 0.004*"mtl" + 0.004*"people" + 0.004*"chi" + 0.003*"state" + 0.003*"order" + 0.003*"like"
+2026-01-17 20:23:05,319 - gensim.models.ldamodel - INFO - topic #4 (0.092): 0.005*"know" + 0.004*"like" + 0.004*"make" + 0.004*"people" + 0.003*"well" + 0.003*"think" + 0.003*"thing" + 0.003*"law" + 0.003*"drive" + 0.002*"new"
+2026-01-17 20:23:05,319 - gensim.models.ldamodel - INFO - topic #3 (0.101): 0.006*"know" + 0.005*"like" + 0.004*"people" + 0.004*"make" + 0.004*"christian" + 0.003*"say" + 0.003*"jesus" + 0.003*"please" + 0.003*"think" + 0.003*"commandment"
+2026-01-17 20:23:05,320 - gensim.models.ldamodel - INFO - topic #0 (0.102): 0.005*"law" + 0.004*"god" + 0.004*"say" + 0.004*"chip" + 0.004*"system" + 0.003*"think" + 0.003*"make" + 0.003*"used" + 0.003*"way" + 0.003*"know"
+2026-01-17 20:23:05,320 - gensim.models.ldamodel - INFO - topic #7 (0.107): 0.005*"use" + 0.005*"problem" + 0.004*"work" + 0.004*"get" + 0.004*"bit" + 0.003*"system" + 0.003*"think" + 0.003*"key" + 0.003*"using" + 0.003*"make"
+2026-01-17 20:23:05,321 - gensim.models.ldamodel - INFO - topic diff=0.906916, rho=0.577350
+2026-01-17 20:23:05,547 - gensim.models.ldamodel - INFO - -8.853 per-word bound, 462.5 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:23:05,547 - gensim.models.ldamodel - INFO - PROGRESS: pass 2, at document #500/500
+2026-01-17 20:23:05,660 - gensim.models.ldamodel - INFO - optimized alpha [np.float32(0.08738803), np.float32(0.076163925), np.float32(0.07650066), np.float32(0.08565305), np.float32(0.075889215), np.float32(0.081413135), np.float32(0.081955545), np.float32(0.092141986)]
+2026-01-17 20:23:05,668 - gensim.models.ldamodel - INFO - topic #4 (0.076): 0.005*"know" + 0.004*"make" + 0.004*"like" + 0.004*"people" + 0.003*"law" + 0.003*"well" + 0.003*"thing" + 0.003*"think" + 0.003*"drive" + 0.003*"test"
+2026-01-17 20:23:05,668 - gensim.models.ldamodel - INFO - topic #1 (0.076): 0.006*"det" + 0.006*"nyr" + 0.005*"tor" + 0.005*"bos" + 0.005*"mtl" + 0.004*"chi" + 0.004*"state" + 0.004*"order" + 0.004*"people" + 0.003*"pit"
+2026-01-17 20:23:05,669 - gensim.models.ldamodel - INFO - topic #3 (0.086): 0.006*"know" + 0.005*"like" + 0.004*"people" + 0.004*"jesus" + 0.004*"make" + 0.004*"christian" + 0.004*"say" + 0.004*"think" + 0.004*"commandment" + 0.003*"please"
+2026-01-17 20:23:05,669 - gensim.models.ldamodel - INFO - topic #0 (0.087): 0.006*"law" + 0.005*"god" + 0.005*"chip" + 0.004*"say" + 0.004*"system" + 0.003*"think" + 0.003*"make" + 0.003*"used" + 0.003*"sabbath" + 0.003*"use"
+2026-01-17 20:23:05,669 - gensim.models.ldamodel - INFO - topic #7 (0.092): 0.005*"problem" + 0.005*"use" + 0.004*"work" + 0.004*"get" + 0.004*"bit" + 0.003*"system" + 0.003*"using" + 0.003*"key" + 0.003*"make" + 0.003*"way"
+2026-01-17 20:23:05,670 - gensim.models.ldamodel - INFO - topic diff=0.582392, rho=0.500000
+2026-01-17 20:23:05,884 - gensim.models.ldamodel - INFO - -8.711 per-word bound, 419.1 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:23:05,884 - gensim.models.ldamodel - INFO - PROGRESS: pass 3, at document #500/500
+2026-01-17 20:23:05,988 - gensim.models.ldamodel - INFO - optimized alpha [np.float32(0.07770637), np.float32(0.06675843), np.float32(0.06645051), np.float32(0.07599754), np.float32(0.065862365), np.float32(0.071470566), np.float32(0.07194601), np.float32(0.08205759)]
+2026-01-17 20:23:05,996 - gensim.models.ldamodel - INFO - topic #4 (0.066): 0.006*"know" + 0.004*"make" + 0.004*"like" + 0.004*"people" + 0.003*"law" + 0.003*"thing" + 0.003*"think" + 0.003*"drive" + 0.003*"test" + 0.003*"well"
+2026-01-17 20:23:05,996 - gensim.models.ldamodel - INFO - topic #2 (0.066): 0.008*"people" + 0.004*"water" + 0.004*"armenian" + 0.004*"get" + 0.004*"dead" + 0.003*"know" + 0.003*"plant" + 0.003*"program" + 0.003*"like" + 0.003*"make"
+2026-01-17 20:23:05,996 - gensim.models.ldamodel - INFO - topic #3 (0.076): 0.006*"know" + 0.005*"like" + 0.004*"jesus" + 0.004*"make" + 0.004*"people" + 0.004*"christian" + 0.004*"say" + 0.004*"think" + 0.004*"commandment" + 0.003*"may"
+2026-01-17 20:23:05,997 - gensim.models.ldamodel - INFO - topic #0 (0.078): 0.006*"law" + 0.005*"chip" + 0.005*"god" + 0.005*"say" + 0.004*"system" + 0.003*"think" + 0.003*"make" + 0.003*"sabbath" + 0.003*"used" + 0.003*"use"
+2026-01-17 20:23:05,997 - gensim.models.ldamodel - INFO - topic #7 (0.082): 0.006*"problem" + 0.005*"use" + 0.004*"work" + 0.004*"get" + 0.004*"bit" + 0.003*"using" + 0.003*"system" + 0.003*"make" + 0.003*"key" + 0.003*"way"
+2026-01-17 20:23:05,998 - gensim.models.ldamodel - INFO - topic diff=0.378227, rho=0.447214
+2026-01-17 20:23:06,220 - gensim.models.ldamodel - INFO - -8.651 per-word bound, 402.1 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:23:06,221 - gensim.models.ldamodel - INFO - PROGRESS: pass 4, at document #500/500
+2026-01-17 20:23:06,375 - gensim.models.ldamodel - INFO - optimized alpha [np.float32(0.07064986), np.float32(0.060009886), np.float32(0.059430953), np.float32(0.06912396), np.float32(0.058806714), np.float32(0.06443515), np.float32(0.0649384), np.float32(0.07512928)]
+2026-01-17 20:23:06,383 - gensim.models.ldamodel - INFO - topic #4 (0.059): 0.006*"know" + 0.004*"make" + 0.004*"like" + 0.004*"people" + 0.003*"law" + 0.003*"thing" + 0.003*"think" + 0.003*"drive" + 0.003*"test" + 0.003*"well"
+2026-01-17 20:23:06,384 - gensim.models.ldamodel - INFO - topic #2 (0.059): 0.008*"people" + 0.004*"water" + 0.004*"armenian" + 0.004*"dead" + 0.004*"get" + 0.003*"know" + 0.003*"plant" + 0.003*"program" + 0.003*"like" + 0.003*"think"
+2026-01-17 20:23:06,385 - gensim.models.ldamodel - INFO - topic #3 (0.069): 0.006*"know" + 0.005*"like" + 0.004*"jesus" + 0.004*"make" + 0.004*"christian" + 0.004*"people" + 0.004*"say" + 0.004*"think" + 0.004*"commandment" + 0.003*"may"
+2026-01-17 20:23:06,385 - gensim.models.ldamodel - INFO - topic #0 (0.071): 0.006*"law" + 0.005*"chip" + 0.005*"god" + 0.005*"say" + 0.004*"system" + 0.003*"think" + 0.003*"sabbath" + 0.003*"used" + 0.003*"make" + 0.003*"use"
+2026-01-17 20:23:06,386 - gensim.models.ldamodel - INFO - topic #7 (0.075): 0.006*"problem" + 0.005*"use" + 0.004*"work" + 0.004*"get" + 0.004*"bit" + 0.004*"using" + 0.003*"system" + 0.003*"lost" + 0.003*"way" + 0.003*"make"
+2026-01-17 20:23:06,387 - gensim.models.ldamodel - INFO - topic diff=0.248677, rho=0.408248
+2026-01-17 20:23:06,632 - gensim.models.ldamodel - INFO - -8.623 per-word bound, 394.2 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:23:06,632 - gensim.models.ldamodel - INFO - PROGRESS: pass 5, at document #500/500
+2026-01-17 20:23:06,734 - gensim.models.ldamodel - INFO - optimized alpha [np.float32(0.06532424), np.float32(0.054920007), np.float32(0.054181214), np.float32(0.06381847), np.float32(0.053544633), np.float32(0.059126537), np.float32(0.05979436), np.float32(0.0699414)]
+2026-01-17 20:23:06,742 - gensim.models.ldamodel - INFO - topic #4 (0.054): 0.006*"know" + 0.004*"make" + 0.004*"like" + 0.004*"people" + 0.003*"law" + 0.003*"thing" + 0.003*"drive" + 0.003*"think" + 0.003*"test" + 0.003*"wing"
+2026-01-17 20:23:06,742 - gensim.models.ldamodel - INFO - topic #2 (0.054): 0.008*"people" + 0.004*"water" + 0.004*"armenian" + 0.004*"dead" + 0.004*"get" + 0.003*"know" + 0.003*"plant" + 0.003*"program" + 0.003*"like" + 0.003*"think"
+2026-01-17 20:23:06,742 - gensim.models.ldamodel - INFO - topic #3 (0.064): 0.006*"know" + 0.005*"like" + 0.004*"jesus" + 0.004*"make" + 0.004*"christian" + 0.004*"people" + 0.004*"say" + 0.004*"think" + 0.004*"commandment" + 0.003*"may"
+2026-01-17 20:23:06,743 - gensim.models.ldamodel - INFO - topic #0 (0.065): 0.006*"law" + 0.005*"chip" + 0.005*"god" + 0.005*"say" + 0.004*"system" + 0.003*"think" + 0.003*"used" + 0.003*"sabbath" + 0.003*"make" + 0.003*"use"
+2026-01-17 20:23:06,743 - gensim.models.ldamodel - INFO - topic #7 (0.070): 0.006*"problem" + 0.005*"use" + 0.004*"work" + 0.004*"get" + 0.004*"bit" + 0.004*"using" + 0.004*"system" + 0.003*"lost" + 0.003*"way" + 0.003*"make"
+2026-01-17 20:23:06,744 - gensim.models.ldamodel - INFO - topic diff=0.165223, rho=0.377964
+2026-01-17 20:23:06,969 - gensim.models.ldamodel - INFO - -8.608 per-word bound, 390.1 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:23:06,969 - gensim.models.ldamodel - INFO - PROGRESS: pass 6, at document #500/500
+2026-01-17 20:23:07,069 - gensim.models.ldamodel - INFO - optimized alpha [np.float32(0.061087042), np.float32(0.05095198), np.float32(0.050071344), np.float32(0.059609573), np.float32(0.049433894), np.float32(0.054943465), np.float32(0.055827618), np.float32(0.065913424)]
+2026-01-17 20:23:07,077 - gensim.models.ldamodel - INFO - topic #4 (0.049): 0.006*"know" + 0.004*"make" + 0.004*"like" + 0.004*"law" + 0.003*"people" + 0.003*"thing" + 0.003*"drive" + 0.003*"think" + 0.003*"test" + 0.003*"wing"
+2026-01-17 20:23:07,077 - gensim.models.ldamodel - INFO - topic #2 (0.050): 0.008*"people" + 0.004*"water" + 0.004*"armenian" + 0.004*"dead" + 0.004*"get" + 0.003*"plant" + 0.003*"program" + 0.003*"know" + 0.003*"like" + 0.003*"think"
+2026-01-17 20:23:07,078 - gensim.models.ldamodel - INFO - topic #3 (0.060): 0.006*"know" + 0.005*"like" + 0.005*"jesus" + 0.004*"make" + 0.004*"christian" + 0.004*"people" + 0.004*"say" + 0.004*"think" + 0.004*"commandment" + 0.003*"may"
+2026-01-17 20:23:07,078 - gensim.models.ldamodel - INFO - topic #0 (0.061): 0.006*"law" + 0.005*"chip" + 0.005*"god" + 0.005*"say" + 0.004*"system" + 0.004*"think" + 0.003*"used" + 0.003*"sabbath" + 0.003*"make" + 0.003*"use"
+2026-01-17 20:23:07,079 - gensim.models.ldamodel - INFO - topic #7 (0.066): 0.006*"problem" + 0.005*"use" + 0.004*"get" + 0.004*"work" + 0.004*"bit" + 0.004*"using" + 0.004*"system" + 0.003*"lost" + 0.003*"way" + 0.003*"make"
+2026-01-17 20:23:07,079 - gensim.models.ldamodel - INFO - topic diff=0.111475, rho=0.353553
+2026-01-17 20:23:07,305 - gensim.models.ldamodel - INFO - -8.599 per-word bound, 387.8 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:23:07,305 - gensim.models.ldamodel - INFO - PROGRESS: pass 7, at document #500/500
+2026-01-17 20:23:07,406 - gensim.models.ldamodel - INFO - optimized alpha [np.float32(0.057654496), np.float32(0.04772186), np.float32(0.046744972), np.float32(0.05621152), np.float32(0.046112366), np.float32(0.051502563), np.float32(0.052581795), np.float32(0.06270486)]
+2026-01-17 20:23:07,414 - gensim.models.ldamodel - INFO - topic #4 (0.046): 0.006*"know" + 0.005*"make" + 0.004*"like" + 0.004*"law" + 0.003*"people" + 0.003*"thing" + 0.003*"drive" + 0.003*"think" + 0.003*"test" + 0.003*"wing"
+2026-01-17 20:23:07,415 - gensim.models.ldamodel - INFO - topic #2 (0.047): 0.008*"people" + 0.004*"water" + 0.004*"armenian" + 0.004*"dead" + 0.004*"get" + 0.003*"plant" + 0.003*"program" + 0.003*"know" + 0.003*"like" + 0.003*"think"
+2026-01-17 20:23:07,415 - gensim.models.ldamodel - INFO - topic #3 (0.056): 0.006*"know" + 0.005*"like" + 0.005*"jesus" + 0.004*"make" + 0.004*"christian" + 0.004*"people" + 0.004*"say" + 0.004*"think" + 0.004*"commandment" + 0.003*"may"
+2026-01-17 20:23:07,415 - gensim.models.ldamodel - INFO - topic #0 (0.058): 0.006*"law" + 0.005*"chip" + 0.005*"god" + 0.005*"say" + 0.004*"system" + 0.004*"think" + 0.003*"used" + 0.003*"sabbath" + 0.003*"use" + 0.003*"make"
+2026-01-17 20:23:07,416 - gensim.models.ldamodel - INFO - topic #7 (0.063): 0.006*"problem" + 0.006*"use" + 0.005*"get" + 0.004*"work" + 0.004*"bit" + 0.004*"using" + 0.004*"system" + 0.003*"lost" + 0.003*"way" + 0.003*"make"
+2026-01-17 20:23:07,416 - gensim.models.ldamodel - INFO - topic diff=0.076597, rho=0.333333
+2026-01-17 20:23:07,636 - gensim.models.ldamodel - INFO - -8.593 per-word bound, 386.3 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:23:07,637 - gensim.models.ldamodel - INFO - PROGRESS: pass 8, at document #500/500
+2026-01-17 20:23:07,737 - gensim.models.ldamodel - INFO - optimized alpha [np.float32(0.0547743), np.float32(0.0450285), np.float32(0.043984447), np.float32(0.053401172), np.float32(0.043359622), np.float32(0.04863903), np.float32(0.049862072), np.float32(0.060083527)]
+2026-01-17 20:23:07,744 - gensim.models.ldamodel - INFO - topic #4 (0.043): 0.006*"know" + 0.005*"make" + 0.004*"like" + 0.004*"law" + 0.003*"people" + 0.003*"thing" + 0.003*"drive" + 0.003*"think" + 0.003*"test" + 0.003*"wing"
+2026-01-17 20:23:07,744 - gensim.models.ldamodel - INFO - topic #2 (0.044): 0.008*"people" + 0.004*"water" + 0.004*"armenian" + 0.004*"dead" + 0.004*"get" + 0.003*"plant" + 0.003*"program" + 0.003*"know" + 0.003*"like" + 0.003*"think"
+2026-01-17 20:23:07,745 - gensim.models.ldamodel - INFO - topic #3 (0.053): 0.006*"know" + 0.005*"like" + 0.005*"jesus" + 0.004*"make" + 0.004*"christian" + 0.004*"people" + 0.004*"say" + 0.004*"think" + 0.004*"commandment" + 0.003*"may"
+2026-01-17 20:23:07,745 - gensim.models.ldamodel - INFO - topic #0 (0.055): 0.006*"law" + 0.005*"chip" + 0.005*"god" + 0.005*"say" + 0.004*"system" + 0.004*"think" + 0.003*"used" + 0.003*"sabbath" + 0.003*"use" + 0.003*"make"
+2026-01-17 20:23:07,746 - gensim.models.ldamodel - INFO - topic #7 (0.060): 0.006*"problem" + 0.006*"use" + 0.005*"get" + 0.004*"work" + 0.004*"using" + 0.004*"bit" + 0.004*"system" + 0.003*"way" + 0.003*"lost" + 0.003*"make"
+2026-01-17 20:23:07,746 - gensim.models.ldamodel - INFO - topic diff=0.053667, rho=0.316228
+2026-01-17 20:23:07,982 - gensim.models.ldamodel - INFO - -8.590 per-word bound, 385.2 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:23:07,982 - gensim.models.ldamodel - INFO - PROGRESS: pass 9, at document #500/500
+2026-01-17 20:23:08,115 - gensim.models.ldamodel - INFO - optimized alpha [np.float32(0.052312143), np.float32(0.04273963), np.float32(0.041647505), np.float32(0.050999127), np.float32(0.04103202), np.float32(0.046209097), np.float32(0.047570024), np.float32(0.05787362)]
+2026-01-17 20:23:08,123 - gensim.models.ldamodel - INFO - topic #4 (0.041): 0.006*"know" + 0.005*"make" + 0.004*"like" + 0.004*"law" + 0.003*"people" + 0.003*"thing" + 0.003*"think" + 0.003*"drive" + 0.003*"test" + 0.003*"wing"
+2026-01-17 20:23:08,124 - gensim.models.ldamodel - INFO - topic #2 (0.042): 0.008*"people" + 0.004*"water" + 0.004*"armenian" + 0.004*"dead" + 0.004*"get" + 0.003*"plant" + 0.003*"program" + 0.003*"know" + 0.003*"like" + 0.003*"think"
+2026-01-17 20:23:08,124 - gensim.models.ldamodel - INFO - topic #3 (0.051): 0.006*"know" + 0.005*"like" + 0.005*"jesus" + 0.004*"make" + 0.004*"christian" + 0.004*"people" + 0.004*"say" + 0.004*"think" + 0.004*"commandment" + 0.003*"may"
+2026-01-17 20:23:08,125 - gensim.models.ldamodel - INFO - topic #0 (0.052): 0.006*"law" + 0.005*"chip" + 0.005*"god" + 0.005*"say" + 0.004*"system" + 0.004*"think" + 0.003*"used" + 0.003*"sabbath" + 0.003*"use" + 0.003*"make"
+2026-01-17 20:23:08,126 - gensim.models.ldamodel - INFO - topic #7 (0.058): 0.006*"problem" + 0.006*"use" + 0.005*"get" + 0.004*"work" + 0.004*"using" + 0.004*"bit" + 0.004*"system" + 0.003*"way" + 0.003*"lost" + 0.003*"make"
+2026-01-17 20:23:08,126 - gensim.models.ldamodel - INFO - topic diff=0.038380, rho=0.301511
+2026-01-17 20:23:08,127 - gensim.utils - INFO - LdaModel lifecycle event {'msg': 'trained LdaModel<num_terms=9195, num_topics=8, decay=0.5, chunksize=2000> in 3.95s', 'datetime': '2026-01-17T20:23:08.127042', 'gensim': '4.4.0', 'python': '3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]', 'platform': 'Windows-10-10.0.19045-SP0', 'event': 'created'}
+2026-01-17 20:23:08,129 - gensim.topic_coherence.probability_estimation - INFO - using ParallelWordOccurrenceAccumulator<processes=7, batch_size=64> to estimate probabilities from sliding windows
+2026-01-17 20:23:56,594 - gensim.topic_coherence.text_analysis - INFO - 7 accumulators retrieved from output queue
+2026-01-17 20:23:56,603 - gensim.topic_coherence.text_analysis - INFO - accumulated word occurrence stats for 12120 virtual documents
+2026-01-17 20:23:56,937 - topic_modeling - INFO -   K= 8: Coherence = 0.3825
+2026-01-17 20:23:56,938 - topic_modeling - INFO - Training LDA with 10 topics...
+2026-01-17 20:24:05,630 - gensim.corpora.dictionary - INFO - adding document #0 to Dictionary<0 unique tokens: []>
+2026-01-17 20:24:05,676 - gensim.corpora.dictionary - INFO - built Dictionary<9195 unique tokens: ['actually', 'anyway', 'bashers', 'beat', 'better']...> from 500 documents (total 36643 corpus positions)
+2026-01-17 20:24:05,676 - gensim.utils - INFO - Dictionary lifecycle event {'msg': "built Dictionary<9195 unique tokens: ['actually', 'anyway', 'bashers', 'beat', 'better']...> from 500 documents (total 36643 corpus positions)", 'datetime': '2026-01-17T20:24:05.676458', 'gensim': '4.4.0', 'python': '3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]', 'platform': 'Windows-10-10.0.19045-SP0', 'event': 'created'}
+2026-01-17 20:24:05,704 - gensim.models.ldamodel - INFO - using autotuned alpha, starting with [np.float32(0.1), np.float32(0.1), np.float32(0.1), np.float32(0.1), np.float32(0.1), np.float32(0.1), np.float32(0.1), np.float32(0.1), np.float32(0.1), np.float32(0.1)]
+2026-01-17 20:24:05,704 - gensim.models.ldamodel - INFO - using symmetric eta at 0.1
+2026-01-17 20:24:05,706 - gensim.models.ldamodel - INFO - using serial LDA version on this node
+2026-01-17 20:24:05,715 - gensim.models.ldamodel - INFO - running online (multi-pass) LDA training, 10 topics, 10 passes over the supplied corpus of 500 documents, updating model once every 500 documents, evaluating perplexity every 500 documents, iterating 50x with a convergence threshold of 0.001000
+2026-01-17 20:24:06,122 - gensim.models.ldamodel - INFO - -12.570 per-word bound, 6079.9 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:24:06,122 - gensim.models.ldamodel - INFO - PROGRESS: pass 0, at document #500/500
+2026-01-17 20:24:06,425 - gensim.models.ldamodel - INFO - optimized alpha [np.float32(0.10028694), np.float32(0.09297394), np.float32(0.096077725), np.float32(0.09938434), np.float32(0.09535464), np.float32(0.09794948), np.float32(0.10115069), np.float32(0.10068713), np.float32(0.10030313), np.float32(0.10588595)]
+2026-01-17 20:24:06,436 - gensim.models.ldamodel - INFO - topic #1 (0.093): 0.004*"people" + 0.004*"like" + 0.003*"new" + 0.003*"file" + 0.003*"get" + 0.003*"think" + 0.003*"nyr" + 0.003*"say" + 0.003*"order" + 0.003*"god"
+2026-01-17 20:24:06,436 - gensim.models.ldamodel - INFO - topic #4 (0.095): 0.004*"law" + 0.004*"make" + 0.004*"like" + 0.003*"people" + 0.003*"well" + 0.003*"think" + 0.003*"know" + 0.003*"thing" + 0.003*"say" + 0.002*"great"
+2026-01-17 20:24:06,437 - gensim.models.ldamodel - INFO - topic #7 (0.101): 0.006*"use" + 0.004*"think" + 0.004*"problem" + 0.004*"system" + 0.003*"work" + 0.003*"get" + 0.003*"key" + 0.003*"like" + 0.003*"say" + 0.003*"file"
+2026-01-17 20:24:06,437 - gensim.models.ldamodel - INFO - topic #6 (0.101): 0.005*"file" + 0.005*"key" + 0.004*"uci" + 0.004*"gif" + 0.004*"get" + 0.004*"incoming" + 0.004*"xterm" + 0.003*"geode" + 0.003*"say" + 0.003*"define"
+2026-01-17 20:24:06,438 - gensim.models.ldamodel - INFO - topic #9 (0.106): 0.005*"know" + 0.004*"well" + 0.003*"get" + 0.003*"drive" + 0.003*"think" + 0.003*"may" + 0.003*"used" + 0.003*"way" + 0.003*"anyone" + 0.003*"people"
+2026-01-17 20:24:06,438 - gensim.models.ldamodel - INFO - topic diff=4.653375, rho=1.000000
+2026-01-17 20:24:06,706 - gensim.models.ldamodel - INFO - -9.468 per-word bound, 708.4 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:24:06,706 - gensim.models.ldamodel - INFO - PROGRESS: pass 1, at document #500/500
+2026-01-17 20:24:06,850 - gensim.models.ldamodel - INFO - optimized alpha [np.float32(0.0844376), np.float32(0.07751925), np.float32(0.07763105), np.float32(0.08265686), np.float32(0.07525824), np.float32(0.08065885), np.float32(0.083740026), np.float32(0.0848758), np.float32(0.08288067), np.float32(0.08858751)]
+2026-01-17 20:24:06,859 - gensim.models.ldamodel - INFO - topic #4 (0.075): 0.005*"law" + 0.004*"know" + 0.003*"like" + 0.003*"make" + 0.003*"thing" + 0.003*"think" + 0.003*"people" + 0.003*"well" + 0.002*"right" + 0.002*"test"
+2026-01-17 20:24:06,860 - gensim.models.ldamodel - INFO - topic #1 (0.078): 0.006*"det" + 0.005*"nyr" + 0.005*"tor" + 0.005*"bos" + 0.004*"mtl" + 0.004*"chi" + 0.004*"order" + 0.004*"like" + 0.003*"state" + 0.003*"pit"
+2026-01-17 20:24:06,860 - gensim.models.ldamodel - INFO - topic #0 (0.084): 0.007*"law" + 0.005*"chip" + 0.004*"god" + 0.004*"system" + 0.003*"say" + 0.003*"number" + 0.003*"sabbath" + 0.003*"key" + 0.003*"think" + 0.003*"use"
+2026-01-17 20:24:06,861 - gensim.models.ldamodel - INFO - topic #7 (0.085): 0.006*"use" + 0.005*"problem" + 0.004*"file" + 0.004*"think" + 0.004*"like" + 0.004*"key" + 0.004*"system" + 0.004*"get" + 0.003*"work" + 0.003*"using"
+2026-01-17 20:24:06,861 - gensim.models.ldamodel - INFO - topic #9 (0.089): 0.005*"know" + 0.004*"well" + 0.004*"may" + 0.003*"use" + 0.003*"drive" + 0.003*"get" + 0.003*"think" + 0.003*"program" + 0.003*"anyone" + 0.003*"used"
+2026-01-17 20:24:06,862 - gensim.models.ldamodel - INFO - topic diff=1.046592, rho=0.577350
+2026-01-17 20:24:07,078 - gensim.models.ldamodel - INFO - -8.954 per-word bound, 495.9 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:24:07,078 - gensim.models.ldamodel - INFO - PROGRESS: pass 2, at document #500/500
+2026-01-17 20:24:07,187 - gensim.models.ldamodel - INFO - optimized alpha [np.float32(0.074237786), np.float32(0.06741133), np.float32(0.06646918), np.float32(0.07206727), np.float32(0.06390643), np.float32(0.06931415), np.float32(0.072866224), np.float32(0.07456006), np.float32(0.072048), np.float32(0.07730451)]
+2026-01-17 20:24:07,198 - gensim.models.ldamodel - INFO - topic #4 (0.064): 0.005*"law" + 0.005*"know" + 0.003*"thing" + 0.003*"like" + 0.003*"think" + 0.003*"make" + 0.003*"test" + 0.003*"right" + 0.003*"group" + 0.003*"people"
+2026-01-17 20:24:07,199 - gensim.models.ldamodel - INFO - topic #2 (0.066): 0.009*"people" + 0.004*"water" + 0.004*"get" + 0.004*"armenian" + 0.004*"dead" + 0.004*"theism" + 0.003*"plant" + 0.003*"make" + 0.003*"belief" + 0.003*"say"
+2026-01-17 20:24:07,199 - gensim.models.ldamodel - INFO - topic #0 (0.074): 0.007*"law" + 0.005*"chip" + 0.005*"god" + 0.004*"system" + 0.004*"sabbath" + 0.004*"key" + 0.004*"use" + 0.003*"number" + 0.003*"say" + 0.003*"printer"
+2026-01-17 20:24:07,200 - gensim.models.ldamodel - INFO - topic #7 (0.075): 0.006*"use" + 0.005*"file" + 0.005*"problem" + 0.004*"like" + 0.004*"think" + 0.004*"key" + 0.004*"bit" + 0.004*"get" + 0.004*"lost" + 0.004*"system"
+2026-01-17 20:24:07,200 - gensim.models.ldamodel - INFO - topic #9 (0.077): 0.005*"know" + 0.004*"well" + 0.004*"may" + 0.004*"use" + 0.003*"drive" + 0.003*"program" + 0.003*"get" + 0.003*"think" + 0.003*"anyone" + 0.003*"used"
+2026-01-17 20:24:07,201 - gensim.models.ldamodel - INFO - topic diff=0.692867, rho=0.500000
+2026-01-17 20:24:07,512 - gensim.models.ldamodel - INFO - -8.773 per-word bound, 437.6 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:24:07,512 - gensim.models.ldamodel - INFO - PROGRESS: pass 3, at document #500/500
+2026-01-17 20:24:07,627 - gensim.models.ldamodel - INFO - optimized alpha [np.float32(0.06706599), np.float32(0.06053191), np.float32(0.059073824), np.float32(0.065022126), np.float32(0.056348603), np.float32(0.061567716), np.float32(0.06568585), np.float32(0.067539155), np.float32(0.064805515), np.float32(0.06983177)]
+2026-01-17 20:24:07,638 - gensim.models.ldamodel - INFO - topic #4 (0.056): 0.005*"law" + 0.005*"know" + 0.004*"thing" + 0.003*"test" + 0.003*"like" + 0.003*"think" + 0.003*"right" + 0.003*"group" + 0.003*"make" + 0.003*"side"
+2026-01-17 20:24:07,638 - gensim.models.ldamodel - INFO - topic #2 (0.059): 0.009*"people" + 0.005*"water" + 0.004*"armenian" + 0.004*"dead" + 0.004*"get" + 0.004*"plant" + 0.003*"theism" + 0.003*"belief" + 0.003*"make" + 0.003*"say"
+2026-01-17 20:24:07,638 - gensim.models.ldamodel - INFO - topic #0 (0.067): 0.008*"law" + 0.006*"chip" + 0.005*"god" + 0.004*"sabbath" + 0.004*"system" + 0.004*"use" + 0.004*"key" + 0.004*"number" + 0.003*"say" + 0.003*"printer"
+2026-01-17 20:24:07,639 - gensim.models.ldamodel - INFO - topic #7 (0.068): 0.006*"file" + 0.006*"use" + 0.006*"problem" + 0.005*"like" + 0.004*"bit" + 0.004*"key" + 0.004*"think" + 0.004*"lost" + 0.004*"get" + 0.004*"using"
+2026-01-17 20:24:07,639 - gensim.models.ldamodel - INFO - topic #9 (0.070): 0.005*"know" + 0.004*"well" + 0.004*"may" + 0.004*"use" + 0.003*"program" + 0.003*"drive" + 0.003*"get" + 0.003*"think" + 0.003*"anyone" + 0.003*"even"
+2026-01-17 20:24:07,640 - gensim.models.ldamodel - INFO - topic diff=0.462609, rho=0.447214
+2026-01-17 20:24:07,857 - gensim.models.ldamodel - INFO - -8.693 per-word bound, 414.0 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:24:07,858 - gensim.models.ldamodel - INFO - PROGRESS: pass 4, at document #500/500
+2026-01-17 20:24:07,968 - gensim.models.ldamodel - INFO - optimized alpha [np.float32(0.06184228), np.float32(0.055470455), np.float32(0.053672243), np.float32(0.060003724), np.float32(0.05088617), np.float32(0.055882327), np.float32(0.060299415), np.float32(0.06240914), np.float32(0.059378594), np.float32(0.06421878)]
+2026-01-17 20:24:07,978 - gensim.models.ldamodel - INFO - topic #4 (0.051): 0.005*"law" + 0.005*"know" + 0.004*"thing" + 0.003*"test" + 0.003*"right" + 0.003*"think" + 0.003*"group" + 0.003*"like" + 0.003*"make" + 0.003*"side"
+2026-01-17 20:24:07,978 - gensim.models.ldamodel - INFO - topic #2 (0.054): 0.009*"people" + 0.005*"water" + 0.004*"armenian" + 0.004*"dead" + 0.004*"get" + 0.004*"plant" + 0.003*"belief" + 0.003*"make" + 0.003*"say" + 0.003*"theism"
+2026-01-17 20:24:07,979 - gensim.models.ldamodel - INFO - topic #0 (0.062): 0.008*"law" + 0.006*"chip" + 0.005*"god" + 0.004*"sabbath" + 0.004*"system" + 0.004*"use" + 0.004*"key" + 0.004*"number" + 0.004*"printer" + 0.003*"say"
+2026-01-17 20:24:07,979 - gensim.models.ldamodel - INFO - topic #7 (0.062): 0.007*"file" + 0.006*"use" + 0.006*"problem" + 0.005*"like" + 0.005*"bit" + 0.004*"key" + 0.004*"lost" + 0.004*"using" + 0.004*"think" + 0.004*"get"
+2026-01-17 20:24:07,980 - gensim.models.ldamodel - INFO - topic #9 (0.064): 0.005*"know" + 0.004*"well" + 0.004*"use" + 0.004*"may" + 0.004*"program" + 0.003*"drive" + 0.003*"get" + 0.003*"anyone" + 0.003*"even" + 0.003*"think"
+2026-01-17 20:24:07,980 - gensim.models.ldamodel - INFO - topic diff=0.310741, rho=0.408248
+2026-01-17 20:24:08,272 - gensim.models.ldamodel - INFO - -8.654 per-word bound, 402.8 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:24:08,272 - gensim.models.ldamodel - INFO - PROGRESS: pass 5, at document #500/500
+2026-01-17 20:24:08,388 - gensim.models.ldamodel - INFO - optimized alpha [np.float32(0.057801683), np.float32(0.051468812), np.float32(0.04946449), np.float32(0.056197613), np.float32(0.04670558), np.float32(0.05151747), np.float32(0.05615692), np.float32(0.058681946), np.float32(0.05515884), np.float32(0.05984481)]
+2026-01-17 20:24:08,398 - gensim.models.ldamodel - INFO - topic #4 (0.047): 0.005*"law" + 0.005*"know" + 0.004*"thing" + 0.004*"test" + 0.003*"right" + 0.003*"group" + 0.003*"think" + 0.003*"like" + 0.003*"make" + 0.003*"side"
+2026-01-17 20:24:08,399 - gensim.models.ldamodel - INFO - topic #2 (0.049): 0.009*"people" + 0.005*"water" + 0.004*"armenian" + 0.004*"dead" + 0.004*"get" + 0.004*"plant" + 0.003*"make" + 0.003*"say" + 0.003*"way" + 0.003*"belief"
+2026-01-17 20:24:08,399 - gensim.models.ldamodel - INFO - topic #0 (0.058): 0.008*"law" + 0.006*"chip" + 0.005*"god" + 0.004*"sabbath" + 0.004*"use" + 0.004*"key" + 0.004*"system" + 0.004*"printer" + 0.004*"number" + 0.003*"say"
+2026-01-17 20:24:08,399 - gensim.models.ldamodel - INFO - topic #7 (0.059): 0.007*"file" + 0.006*"use" + 0.006*"problem" + 0.005*"like" + 0.005*"bit" + 0.004*"key" + 0.004*"using" + 0.004*"lost" + 0.004*"get" + 0.004*"think"
+2026-01-17 20:24:08,400 - gensim.models.ldamodel - INFO - topic #9 (0.060): 0.005*"know" + 0.004*"well" + 0.004*"use" + 0.004*"may" + 0.004*"program" + 0.003*"drive" + 0.003*"get" + 0.003*"anyone" + 0.003*"even" + 0.003*"think"
+2026-01-17 20:24:08,401 - gensim.models.ldamodel - INFO - topic diff=0.210372, rho=0.377964
+2026-01-17 20:24:08,624 - gensim.models.ldamodel - INFO - -8.632 per-word bound, 396.8 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:24:08,624 - gensim.models.ldamodel - INFO - PROGRESS: pass 6, at document #500/500
+2026-01-17 20:24:08,752 - gensim.models.ldamodel - INFO - optimized alpha [np.float32(0.05455865), np.float32(0.048196632), np.float32(0.04609579), np.float32(0.053039692), np.float32(0.04337285), np.float32(0.0480287), np.float32(0.052806772), np.float32(0.055589676), np.float32(0.051796943), np.float32(0.056390606)]
+2026-01-17 20:24:08,761 - gensim.models.ldamodel - INFO - topic #4 (0.043): 0.005*"law" + 0.005*"know" + 0.004*"test" + 0.004*"thing" + 0.003*"right" + 0.003*"group" + 0.003*"think" + 0.003*"like" + 0.003*"make" + 0.003*"side"
+2026-01-17 20:24:08,762 - gensim.models.ldamodel - INFO - topic #2 (0.046): 0.009*"people" + 0.005*"water" + 0.004*"armenian" + 0.004*"dead" + 0.004*"get" + 0.004*"plant" + 0.003*"make" + 0.003*"say" + 0.003*"way" + 0.003*"see"
+2026-01-17 20:24:08,762 - gensim.models.ldamodel - INFO - topic #0 (0.055): 0.008*"law" + 0.006*"chip" + 0.005*"god" + 0.004*"sabbath" + 0.004*"use" + 0.004*"key" + 0.004*"system" + 0.004*"printer" + 0.004*"number" + 0.003*"say"
+2026-01-17 20:24:08,763 - gensim.models.ldamodel - INFO - topic #7 (0.056): 0.007*"file" + 0.006*"use" + 0.006*"problem" + 0.005*"like" + 0.005*"bit" + 0.004*"using" + 0.004*"key" + 0.004*"lost" + 0.004*"get" + 0.004*"driver"
+2026-01-17 20:24:08,763 - gensim.models.ldamodel - INFO - topic #9 (0.056): 0.005*"know" + 0.004*"well" + 0.004*"use" + 0.004*"may" + 0.004*"program" + 0.003*"drive" + 0.003*"get" + 0.003*"anyone" + 0.003*"even" + 0.003*"think"
+2026-01-17 20:24:08,764 - gensim.models.ldamodel - INFO - topic diff=0.144004, rho=0.353553
+2026-01-17 20:24:08,989 - gensim.models.ldamodel - INFO - -8.619 per-word bound, 393.3 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:24:08,990 - gensim.models.ldamodel - INFO - PROGRESS: pass 7, at document #500/500
+2026-01-17 20:24:09,094 - gensim.models.ldamodel - INFO - optimized alpha [np.float32(0.051925953), np.float32(0.045485374), np.float32(0.04329085), np.float32(0.05047068), np.float32(0.040638406), np.float32(0.045160282), np.float32(0.05002603), np.float32(0.053098794), np.float32(0.049008347), np.float32(0.05352421)]
+2026-01-17 20:24:09,103 - gensim.models.ldamodel - INFO - topic #4 (0.041): 0.005*"law" + 0.005*"know" + 0.004*"test" + 0.004*"thing" + 0.003*"right" + 0.003*"group" + 0.003*"think" + 0.003*"like" + 0.003*"make" + 0.003*"side"
+2026-01-17 20:24:09,103 - gensim.models.ldamodel - INFO - topic #2 (0.043): 0.009*"people" + 0.005*"water" + 0.005*"armenian" + 0.005*"dead" + 0.004*"get" + 0.004*"plant" + 0.003*"make" + 0.003*"know" + 0.003*"say" + 0.003*"way"
+2026-01-17 20:24:09,104 - gensim.models.ldamodel - INFO - topic #0 (0.052): 0.008*"law" + 0.007*"chip" + 0.005*"god" + 0.004*"sabbath" + 0.004*"use" + 0.004*"key" + 0.004*"system" + 0.004*"printer" + 0.004*"number" + 0.003*"say"
+2026-01-17 20:24:09,104 - gensim.models.ldamodel - INFO - topic #7 (0.053): 0.008*"file" + 0.006*"use" + 0.006*"problem" + 0.005*"bit" + 0.005*"like" + 0.004*"using" + 0.004*"key" + 0.004*"lost" + 0.004*"get" + 0.004*"driver"
+2026-01-17 20:24:09,105 - gensim.models.ldamodel - INFO - topic #9 (0.054): 0.005*"know" + 0.004*"well" + 0.004*"use" + 0.004*"program" + 0.004*"may" + 0.003*"drive" + 0.003*"get" + 0.003*"anyone" + 0.003*"even" + 0.003*"think"
+2026-01-17 20:24:09,105 - gensim.models.ldamodel - INFO - topic diff=0.099881, rho=0.333333
+2026-01-17 20:24:09,339 - gensim.models.ldamodel - INFO - -8.611 per-word bound, 391.0 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:24:09,339 - gensim.models.ldamodel - INFO - PROGRESS: pass 8, at document #500/500
+2026-01-17 20:24:09,442 - gensim.models.ldamodel - INFO - optimized alpha [np.float32(0.049711645), np.float32(0.043191172), np.float32(0.040933214), np.float32(0.048241798), np.float32(0.038343195), np.float32(0.042748243), np.float32(0.047668852), np.float32(0.05099267), np.float32(0.046678234), np.float32(0.051124834)]
+2026-01-17 20:24:09,452 - gensim.models.ldamodel - INFO - topic #4 (0.038): 0.005*"law" + 0.005*"know" + 0.004*"test" + 0.004*"thing" + 0.003*"group" + 0.003*"right" + 0.003*"think" + 0.003*"like" + 0.003*"make" + 0.003*"side"
+2026-01-17 20:24:09,452 - gensim.models.ldamodel - INFO - topic #2 (0.041): 0.010*"people" + 0.005*"water" + 0.005*"armenian" + 0.005*"dead" + 0.004*"get" + 0.004*"plant" + 0.003*"make" + 0.003*"know" + 0.003*"see" + 0.003*"way"
+2026-01-17 20:24:09,453 - gensim.models.ldamodel - INFO - topic #0 (0.050): 0.008*"law" + 0.007*"chip" + 0.005*"god" + 0.004*"sabbath" + 0.004*"use" + 0.004*"key" + 0.004*"system" + 0.004*"printer" + 0.004*"number" + 0.003*"say"
+2026-01-17 20:24:09,453 - gensim.models.ldamodel - INFO - topic #7 (0.051): 0.008*"file" + 0.006*"problem" + 0.006*"use" + 0.005*"bit" + 0.005*"like" + 0.004*"using" + 0.004*"lost" + 0.004*"key" + 0.004*"driver" + 0.004*"get"
+2026-01-17 20:24:09,454 - gensim.models.ldamodel - INFO - topic #9 (0.051): 0.006*"know" + 0.004*"well" + 0.004*"program" + 0.004*"use" + 0.004*"may" + 0.003*"drive" + 0.003*"get" + 0.003*"anyone" + 0.003*"even" + 0.003*"think"
+2026-01-17 20:24:09,454 - gensim.models.ldamodel - INFO - topic diff=0.070432, rho=0.316228
+2026-01-17 20:24:09,673 - gensim.models.ldamodel - INFO - -8.605 per-word bound, 389.5 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:24:09,674 - gensim.models.ldamodel - INFO - PROGRESS: pass 9, at document #500/500
+2026-01-17 20:24:09,780 - gensim.models.ldamodel - INFO - optimized alpha [np.float32(0.047787007), np.float32(0.041216563), np.float32(0.038915396), np.float32(0.046308734), np.float32(0.036381178), np.float32(0.04068299), np.float32(0.04566578), np.float32(0.04918461), np.float32(0.044637654), np.float32(0.049018577)]
+2026-01-17 20:24:09,789 - gensim.models.ldamodel - INFO - topic #4 (0.036): 0.005*"law" + 0.005*"know" + 0.004*"test" + 0.004*"thing" + 0.003*"group" + 0.003*"right" + 0.003*"think" + 0.003*"like" + 0.003*"make" + 0.003*"side"
+2026-01-17 20:24:09,789 - gensim.models.ldamodel - INFO - topic #2 (0.039): 0.010*"people" + 0.005*"water" + 0.005*"armenian" + 0.005*"dead" + 0.004*"get" + 0.004*"plant" + 0.003*"make" + 0.003*"know" + 0.003*"see" + 0.003*"way"
+2026-01-17 20:24:09,790 - gensim.models.ldamodel - INFO - topic #0 (0.048): 0.008*"law" + 0.007*"chip" + 0.005*"god" + 0.004*"sabbath" + 0.004*"use" + 0.004*"key" + 0.004*"printer" + 0.004*"system" + 0.004*"number" + 0.003*"say"
+2026-01-17 20:24:09,790 - gensim.models.ldamodel - INFO - topic #9 (0.049): 0.006*"know" + 0.004*"well" + 0.004*"program" + 0.004*"use" + 0.004*"may" + 0.003*"drive" + 0.003*"anyone" + 0.003*"get" + 0.003*"even" + 0.003*"think"
+2026-01-17 20:24:09,791 - gensim.models.ldamodel - INFO - topic #7 (0.049): 0.008*"file" + 0.006*"problem" + 0.006*"use" + 0.005*"bit" + 0.005*"like" + 0.005*"using" + 0.004*"lost" + 0.004*"key" + 0.004*"driver" + 0.004*"get"
+2026-01-17 20:24:09,791 - gensim.models.ldamodel - INFO - topic diff=0.050538, rho=0.301511
+2026-01-17 20:24:09,792 - gensim.utils - INFO - LdaModel lifecycle event {'msg': 'trained LdaModel<num_terms=9195, num_topics=10, decay=0.5, chunksize=2000> in 4.08s', 'datetime': '2026-01-17T20:24:09.792105', 'gensim': '4.4.0', 'python': '3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]', 'platform': 'Windows-10-10.0.19045-SP0', 'event': 'created'}
+2026-01-17 20:24:09,793 - gensim.topic_coherence.probability_estimation - INFO - using ParallelWordOccurrenceAccumulator<processes=7, batch_size=64> to estimate probabilities from sliding windows
+2026-01-17 20:24:58,104 - gensim.topic_coherence.text_analysis - INFO - 7 accumulators retrieved from output queue
+2026-01-17 20:24:58,116 - gensim.topic_coherence.text_analysis - INFO - accumulated word occurrence stats for 12120 virtual documents
+2026-01-17 20:24:58,512 - topic_modeling - INFO -   K=10: Coherence = 0.3712
+2026-01-17 20:24:58,514 - topic_modeling - INFO - Training LDA with 5 topics...
+2026-01-17 20:25:07,201 - topic_modeling - INFO - 
+Comparing LDA and NMF models (BONUS)...
+2026-01-17 20:25:07,202 - topic_modeling - INFO - Training LDA with 5 topics...
+2026-01-17 20:25:15,917 - topic_modeling - INFO - Training NMF with 5 topics...
+2026-01-17 20:25:16,090 - topic_modeling - INFO - TF-IDF DTM shape: (1945, 800)
+2026-01-17 20:25:16,091 - topic_modeling - ERROR - NMF training failed: NMF.__init__() got an unexpected keyword argument 'alpha'. Did you mean 'alpha_W'?
+2026-01-17 20:25:16,091 - topic_modeling - INFO - Skipping NMF comparison
+2026-01-17 20:25:17,223 - topic_modeling - INFO - 
+LDA vs NMF Comparison:
+2026-01-17 20:25:17,224 - topic_modeling - INFO -   LDA Perplexity: 650.88
+2026-01-17 20:25:17,224 - topic_modeling - INFO -   NMF: Not available (training failed or skipped)
+2026-01-17 20:25:17,228 - topic_modeling - INFO -   Best K: 5
+2026-01-17 20:25:17,228 - topic_modeling - INFO -   Documents: 1,945
+2026-01-17 20:25:17,228 - topic_modeling - INFO -   Vocabulary size: 1,000
+2026-01-17 20:25:17,228 - topic_modeling - INFO - 
+Topic Distribution:
+2026-01-17 20:25:17,229 - topic_modeling - INFO -   Topic  0:  628 docs (32.3%)
+2026-01-17 20:25:17,229 - topic_modeling - INFO -   Topic  1:  201 docs (10.3%)
+2026-01-17 20:25:17,229 - topic_modeling - INFO -   Topic  2:  188 docs (9.7%)
+2026-01-17 20:25:17,229 - topic_modeling - INFO -   Topic  3:   21 docs (1.1%)
+2026-01-17 20:25:17,230 - topic_modeling - INFO -   Topic  4:  907 docs (46.6%)
+2026-01-17 20:25:17,230 - topic_modeling - INFO - 
+Top Words per Topic:
+2026-01-17 20:25:17,230 - topic_modeling - INFO -   Topic  0: file, use, window, image, jpeg
+2026-01-17 20:25:17,230 - topic_modeling - INFO -   Topic  1: people, state, government, police, armenian
+2026-01-17 20:25:17,230 - topic_modeling - INFO -   Topic  2: information, league, game, group, space
+2026-01-17 20:25:17,231 - topic_modeling - INFO -   Topic  3: key, newsgroup, vote, van, john
+2026-01-17 20:25:17,231 - topic_modeling - INFO -   Topic  4: like, think, know, people, god
+2026-01-17 20:25:17,233 - root - INFO - Results saved to output_20260117_202137/results\topic_results.pkl
+2026-01-17 20:25:17,233 - topic_modeling - INFO - 
+Generating topic modeling visualizations...
+2026-01-17 20:25:18,755 - topic_modeling - INFO - Creating word clouds for lda topics...
+2026-01-17 20:25:22,705 - topic_modeling - INFO - Creating pyLDAvis visualization...
+2026-01-17 20:25:22,708 - gensim.corpora.dictionary - INFO - adding document #0 to Dictionary<0 unique tokens: []>
+2026-01-17 20:25:22,755 - gensim.corpora.dictionary - INFO - built Dictionary<9195 unique tokens: ['actually', 'anyway', 'bashers', 'beat', 'better']...> from 500 documents (total 36643 corpus positions)
+2026-01-17 20:25:22,755 - gensim.utils - INFO - Dictionary lifecycle event {'msg': "built Dictionary<9195 unique tokens: ['actually', 'anyway', 'bashers', 'beat', 'better']...> from 500 documents (total 36643 corpus positions)", 'datetime': '2026-01-17T20:25:22.755502', 'gensim': '4.4.0', 'python': '3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]', 'platform': 'Windows-10-10.0.19045-SP0', 'event': 'created'}
+2026-01-17 20:25:22,789 - gensim.models.ldamodel - INFO - using symmetric alpha at 0.2
+2026-01-17 20:25:22,789 - gensim.models.ldamodel - INFO - using symmetric eta at 0.2
+2026-01-17 20:25:22,791 - gensim.models.ldamodel - INFO - using serial LDA version on this node
+2026-01-17 20:25:22,797 - gensim.models.ldamodel - INFO - running online (multi-pass) LDA training, 5 topics, 10 passes over the supplied corpus of 500 documents, updating model once every 500 documents, evaluating perplexity every 500 documents, iterating 50x with a convergence threshold of 0.001000
+2026-01-17 20:25:23,291 - gensim.models.ldamodel - INFO - -10.529 per-word bound, 1477.7 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:25:23,291 - gensim.models.ldamodel - INFO - PROGRESS: pass 0, at document #500/500
+2026-01-17 20:25:23,649 - gensim.models.ldamodel - INFO - topic #0 (0.200): 0.004*"think" + 0.003*"know" + 0.003*"system" + 0.003*"law" + 0.003*"say" + 0.003*"way" + 0.003*"used" + 0.003*"make" + 0.003*"chip" + 0.003*"like"
+2026-01-17 20:25:23,650 - gensim.models.ldamodel - INFO - topic #1 (0.200): 0.004*"people" + 0.003*"file" + 0.003*"det" + 0.003*"new" + 0.003*"nyr" + 0.003*"like" + 0.003*"work" + 0.003*"get" + 0.003*"tor" + 0.003*"bos"
+2026-01-17 20:25:23,651 - gensim.models.ldamodel - INFO - topic #2 (0.200): 0.005*"people" + 0.004*"key" + 0.003*"get" + 0.003*"know" + 0.003*"think" + 0.003*"use" + 0.003*"make" + 0.003*"way" + 0.003*"like" + 0.002*"file"
+2026-01-17 20:25:23,651 - gensim.models.ldamodel - INFO - topic #3 (0.200): 0.005*"know" + 0.004*"like" + 0.004*"people" + 0.003*"get" + 0.003*"problem" + 0.003*"make" + 0.003*"say" + 0.003*"use" + 0.003*"well" + 0.003*"please"
+2026-01-17 20:25:23,652 - gensim.models.ldamodel - INFO - topic #4 (0.200): 0.004*"like" + 0.004*"well" + 0.003*"make" + 0.003*"know" + 0.003*"think" + 0.003*"people" + 0.003*"law" + 0.003*"get" + 0.002*"use" + 0.002*"thing"
+2026-01-17 20:25:23,652 - gensim.models.ldamodel - INFO - topic diff=2.047603, rho=1.000000
+2026-01-17 20:25:23,997 - gensim.models.ldamodel - INFO - -8.970 per-word bound, 501.6 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:25:23,998 - gensim.models.ldamodel - INFO - PROGRESS: pass 1, at document #500/500
+2026-01-17 20:25:24,168 - gensim.models.ldamodel - INFO - topic #0 (0.200): 0.004*"law" + 0.004*"system" + 0.003*"say" + 0.003*"chip" + 0.003*"think" + 0.003*"used" + 0.003*"know" + 0.003*"god" + 0.003*"use" + 0.003*"way"
+2026-01-17 20:25:24,169 - gensim.models.ldamodel - INFO - topic #1 (0.200): 0.004*"det" + 0.004*"people" + 0.004*"nyr" + 0.004*"file" + 0.004*"tor" + 0.003*"bos" + 0.003*"new" + 0.003*"like" + 0.003*"mtl" + 0.003*"get"
+2026-01-17 20:25:24,169 - gensim.models.ldamodel - INFO - topic #2 (0.200): 0.005*"people" + 0.004*"key" + 0.003*"get" + 0.003*"think" + 0.003*"know" + 0.003*"make" + 0.003*"like" + 0.003*"way" + 0.002*"use" + 0.002*"new"
+2026-01-17 20:25:24,170 - gensim.models.ldamodel - INFO - topic #3 (0.200): 0.004*"know" + 0.004*"people" + 0.004*"like" + 0.003*"problem" + 0.003*"make" + 0.003*"get" + 0.003*"say" + 0.003*"christian" + 0.003*"jesus" + 0.003*"need"
+2026-01-17 20:25:24,170 - gensim.models.ldamodel - INFO - topic #4 (0.200): 0.004*"like" + 0.003*"make" + 0.003*"know" + 0.003*"well" + 0.003*"think" + 0.003*"window" + 0.003*"get" + 0.003*"use" + 0.002*"thing" + 0.002*"people"
+2026-01-17 20:25:24,171 - gensim.models.ldamodel - INFO - topic diff=0.632625, rho=0.577350
+2026-01-17 20:25:24,421 - gensim.models.ldamodel - INFO - -8.732 per-word bound, 425.2 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:25:24,421 - gensim.models.ldamodel - INFO - PROGRESS: pass 2, at document #500/500
+2026-01-17 20:25:24,554 - gensim.models.ldamodel - INFO - topic #0 (0.200): 0.004*"law" + 0.004*"system" + 0.004*"say" + 0.003*"chip" + 0.003*"god" + 0.003*"think" + 0.003*"use" + 0.003*"used" + 0.003*"key" + 0.003*"way"
+2026-01-17 20:25:24,554 - gensim.models.ldamodel - INFO - topic #1 (0.200): 0.004*"det" + 0.004*"people" + 0.004*"nyr" + 0.004*"tor" + 0.004*"file" + 0.004*"bos" + 0.003*"mtl" + 0.003*"new" + 0.003*"like" + 0.003*"chi"
+2026-01-17 20:25:24,555 - gensim.models.ldamodel - INFO - topic #2 (0.200): 0.005*"people" + 0.004*"key" + 0.003*"think" + 0.003*"get" + 0.003*"know" + 0.003*"make" + 0.003*"istanbul" + 0.003*"armenian" + 0.003*"like" + 0.003*"new"
+2026-01-17 20:25:24,556 - gensim.models.ldamodel - INFO - topic #3 (0.200): 0.004*"people" + 0.004*"know" + 0.004*"like" + 0.003*"christian" + 0.003*"say" + 0.003*"make" + 0.003*"problem" + 0.003*"jesus" + 0.003*"get" + 0.003*"need"
+2026-01-17 20:25:24,556 - gensim.models.ldamodel - INFO - topic #4 (0.200): 0.004*"like" + 0.004*"know" + 0.003*"make" + 0.003*"window" + 0.003*"think" + 0.003*"well" + 0.003*"get" + 0.003*"thing" + 0.002*"use" + 0.002*"way"
+2026-01-17 20:25:24,557 - gensim.models.ldamodel - INFO - topic diff=0.380064, rho=0.500000
+2026-01-17 20:25:24,868 - gensim.models.ldamodel - INFO - -8.654 per-word bound, 402.9 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:25:24,869 - gensim.models.ldamodel - INFO - PROGRESS: pass 3, at document #500/500
+2026-01-17 20:25:24,995 - gensim.models.ldamodel - INFO - topic #0 (0.200): 0.004*"law" + 0.004*"system" + 0.004*"say" + 0.004*"chip" + 0.003*"god" + 0.003*"think" + 0.003*"use" + 0.003*"key" + 0.003*"used" + 0.003*"way"
+2026-01-17 20:25:24,996 - gensim.models.ldamodel - INFO - topic #1 (0.200): 0.005*"det" + 0.004*"people" + 0.004*"nyr" + 0.004*"tor" + 0.004*"file" + 0.004*"bos" + 0.003*"mtl" + 0.003*"new" + 0.003*"like" + 0.003*"chi"
+2026-01-17 20:25:24,996 - gensim.models.ldamodel - INFO - topic #2 (0.200): 0.005*"people" + 0.004*"key" + 0.003*"know" + 0.003*"think" + 0.003*"get" + 0.003*"istanbul" + 0.003*"make" + 0.003*"armenian" + 0.003*"new" + 0.003*"like"
+2026-01-17 20:25:24,996 - gensim.models.ldamodel - INFO - topic #3 (0.200): 0.004*"people" + 0.004*"know" + 0.004*"like" + 0.004*"christian" + 0.003*"jesus" + 0.003*"say" + 0.003*"make" + 0.003*"problem" + 0.003*"get" + 0.003*"commandment"
+2026-01-17 20:25:24,997 - gensim.models.ldamodel - INFO - topic #4 (0.200): 0.004*"like" + 0.004*"know" + 0.003*"make" + 0.003*"window" + 0.003*"think" + 0.003*"get" + 0.003*"well" + 0.003*"way" + 0.003*"thing" + 0.003*"work"
+2026-01-17 20:25:24,997 - gensim.models.ldamodel - INFO - topic diff=0.234215, rho=0.447214
+2026-01-17 20:25:25,250 - gensim.models.ldamodel - INFO - -8.624 per-word bound, 394.5 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:25:25,250 - gensim.models.ldamodel - INFO - PROGRESS: pass 4, at document #500/500
+2026-01-17 20:25:25,370 - gensim.models.ldamodel - INFO - topic #0 (0.200): 0.004*"law" + 0.004*"system" + 0.004*"say" + 0.004*"chip" + 0.003*"god" + 0.003*"use" + 0.003*"think" + 0.003*"key" + 0.003*"used" + 0.003*"way"
+2026-01-17 20:25:25,371 - gensim.models.ldamodel - INFO - topic #1 (0.200): 0.005*"det" + 0.004*"people" + 0.004*"nyr" + 0.004*"tor" + 0.004*"file" + 0.004*"bos" + 0.003*"mtl" + 0.003*"new" + 0.003*"chi" + 0.003*"like"
+2026-01-17 20:25:25,371 - gensim.models.ldamodel - INFO - topic #2 (0.200): 0.005*"people" + 0.004*"key" + 0.003*"know" + 0.003*"think" + 0.003*"get" + 0.003*"istanbul" + 0.003*"make" + 0.003*"armenian" + 0.003*"new" + 0.003*"like"
+2026-01-17 20:25:25,372 - gensim.models.ldamodel - INFO - topic #3 (0.200): 0.004*"people" + 0.004*"know" + 0.004*"like" + 0.004*"christian" + 0.003*"jesus" + 0.003*"say" + 0.003*"make" + 0.003*"commandment" + 0.003*"problem" + 0.003*"get"
+2026-01-17 20:25:25,372 - gensim.models.ldamodel - INFO - topic #4 (0.200): 0.004*"like" + 0.004*"know" + 0.003*"make" + 0.003*"window" + 0.003*"think" + 0.003*"get" + 0.003*"well" + 0.003*"way" + 0.003*"work" + 0.003*"thing"
+2026-01-17 20:25:25,373 - gensim.models.ldamodel - INFO - topic diff=0.148163, rho=0.408248
+2026-01-17 20:25:25,610 - gensim.models.ldamodel - INFO - -8.610 per-word bound, 390.8 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:25:25,610 - gensim.models.ldamodel - INFO - PROGRESS: pass 5, at document #500/500
+2026-01-17 20:25:25,734 - gensim.models.ldamodel - INFO - topic #0 (0.200): 0.004*"law" + 0.004*"system" + 0.004*"say" + 0.004*"chip" + 0.003*"god" + 0.003*"use" + 0.003*"key" + 0.003*"think" + 0.003*"used" + 0.003*"way"
+2026-01-17 20:25:25,734 - gensim.models.ldamodel - INFO - topic #1 (0.200): 0.005*"det" + 0.004*"people" + 0.004*"nyr" + 0.004*"tor" + 0.004*"file" + 0.004*"bos" + 0.003*"mtl" + 0.003*"new" + 0.003*"chi" + 0.003*"like"
+2026-01-17 20:25:25,735 - gensim.models.ldamodel - INFO - topic #2 (0.200): 0.005*"people" + 0.004*"key" + 0.003*"know" + 0.003*"think" + 0.003*"get" + 0.003*"istanbul" + 0.003*"armenian" + 0.003*"make" + 0.003*"new" + 0.003*"like"
+2026-01-17 20:25:25,735 - gensim.models.ldamodel - INFO - topic #3 (0.200): 0.004*"people" + 0.004*"know" + 0.004*"like" + 0.004*"christian" + 0.003*"jesus" + 0.003*"say" + 0.003*"make" + 0.003*"commandment" + 0.003*"problem" + 0.003*"get"
+2026-01-17 20:25:25,735 - gensim.models.ldamodel - INFO - topic #4 (0.200): 0.004*"like" + 0.004*"know" + 0.003*"make" + 0.003*"window" + 0.003*"get" + 0.003*"think" + 0.003*"well" + 0.003*"way" + 0.003*"work" + 0.002*"thing"
+2026-01-17 20:25:25,736 - gensim.models.ldamodel - INFO - topic diff=0.096080, rho=0.377964
+2026-01-17 20:25:25,959 - gensim.models.ldamodel - INFO - -8.603 per-word bound, 388.9 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:25:25,960 - gensim.models.ldamodel - INFO - PROGRESS: pass 6, at document #500/500
+2026-01-17 20:25:26,088 - gensim.models.ldamodel - INFO - topic #0 (0.200): 0.004*"law" + 0.004*"system" + 0.004*"say" + 0.004*"chip" + 0.003*"god" + 0.003*"use" + 0.003*"key" + 0.003*"think" + 0.003*"used" + 0.003*"like"
+2026-01-17 20:25:26,089 - gensim.models.ldamodel - INFO - topic #1 (0.200): 0.005*"det" + 0.004*"people" + 0.004*"nyr" + 0.004*"tor" + 0.004*"file" + 0.004*"bos" + 0.004*"mtl" + 0.003*"new" + 0.003*"chi" + 0.003*"like"
+2026-01-17 20:25:26,089 - gensim.models.ldamodel - INFO - topic #2 (0.200): 0.005*"people" + 0.004*"key" + 0.003*"know" + 0.003*"think" + 0.003*"get" + 0.003*"istanbul" + 0.003*"armenian" + 0.003*"make" + 0.003*"new" + 0.003*"like"
+2026-01-17 20:25:26,089 - gensim.models.ldamodel - INFO - topic #3 (0.200): 0.004*"people" + 0.004*"know" + 0.004*"like" + 0.004*"christian" + 0.004*"jesus" + 0.003*"say" + 0.003*"commandment" + 0.003*"make" + 0.003*"anyone" + 0.003*"get"
+2026-01-17 20:25:26,090 - gensim.models.ldamodel - INFO - topic #4 (0.200): 0.004*"like" + 0.004*"know" + 0.003*"make" + 0.003*"window" + 0.003*"get" + 0.003*"think" + 0.003*"way" + 0.003*"well" + 0.003*"work" + 0.002*"thing"
+2026-01-17 20:25:26,090 - gensim.models.ldamodel - INFO - topic diff=0.063907, rho=0.353553
+2026-01-17 20:25:26,315 - gensim.models.ldamodel - INFO - -8.600 per-word bound, 387.9 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:25:26,316 - gensim.models.ldamodel - INFO - PROGRESS: pass 7, at document #500/500
+2026-01-17 20:25:26,440 - gensim.models.ldamodel - INFO - topic #0 (0.200): 0.004*"law" + 0.004*"system" + 0.004*"say" + 0.004*"chip" + 0.003*"god" + 0.003*"use" + 0.003*"key" + 0.003*"think" + 0.003*"used" + 0.003*"like"
+2026-01-17 20:25:26,440 - gensim.models.ldamodel - INFO - topic #1 (0.200): 0.005*"det" + 0.004*"people" + 0.004*"nyr" + 0.004*"tor" + 0.004*"file" + 0.004*"bos" + 0.004*"mtl" + 0.003*"new" + 0.003*"chi" + 0.003*"like"
+2026-01-17 20:25:26,441 - gensim.models.ldamodel - INFO - topic #2 (0.200): 0.005*"people" + 0.004*"key" + 0.004*"know" + 0.003*"think" + 0.003*"get" + 0.003*"istanbul" + 0.003*"armenian" + 0.003*"make" + 0.003*"new" + 0.003*"like"
+2026-01-17 20:25:26,441 - gensim.models.ldamodel - INFO - topic #3 (0.200): 0.004*"people" + 0.004*"know" + 0.004*"like" + 0.004*"christian" + 0.004*"jesus" + 0.003*"say" + 0.003*"commandment" + 0.003*"make" + 0.003*"anyone" + 0.003*"get"
+2026-01-17 20:25:26,442 - gensim.models.ldamodel - INFO - topic #4 (0.200): 0.004*"like" + 0.004*"know" + 0.004*"make" + 0.003*"window" + 0.003*"get" + 0.003*"think" + 0.003*"way" + 0.003*"well" + 0.003*"work" + 0.002*"thing"
+2026-01-17 20:25:26,442 - gensim.models.ldamodel - INFO - topic diff=0.043537, rho=0.333333
+2026-01-17 20:25:26,694 - gensim.models.ldamodel - INFO - -8.597 per-word bound, 387.3 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:25:26,694 - gensim.models.ldamodel - INFO - PROGRESS: pass 8, at document #500/500
+2026-01-17 20:25:26,819 - gensim.models.ldamodel - INFO - topic #0 (0.200): 0.004*"law" + 0.004*"system" + 0.004*"say" + 0.004*"chip" + 0.003*"god" + 0.003*"use" + 0.003*"key" + 0.003*"think" + 0.003*"used" + 0.003*"like"
+2026-01-17 20:25:26,820 - gensim.models.ldamodel - INFO - topic #1 (0.200): 0.005*"det" + 0.004*"people" + 0.004*"nyr" + 0.004*"tor" + 0.004*"file" + 0.004*"bos" + 0.004*"mtl" + 0.003*"new" + 0.003*"chi" + 0.003*"like"
+2026-01-17 20:25:26,820 - gensim.models.ldamodel - INFO - topic #2 (0.200): 0.005*"people" + 0.004*"key" + 0.004*"know" + 0.003*"think" + 0.003*"get" + 0.003*"istanbul" + 0.003*"armenian" + 0.003*"make" + 0.003*"new" + 0.003*"like"
+2026-01-17 20:25:26,820 - gensim.models.ldamodel - INFO - topic #3 (0.200): 0.004*"people" + 0.004*"know" + 0.004*"like" + 0.004*"christian" + 0.004*"jesus" + 0.003*"say" + 0.003*"commandment" + 0.003*"make" + 0.003*"anyone" + 0.003*"get"
+2026-01-17 20:25:26,821 - gensim.models.ldamodel - INFO - topic #4 (0.200): 0.004*"like" + 0.004*"know" + 0.004*"make" + 0.003*"window" + 0.003*"get" + 0.003*"think" + 0.003*"way" + 0.003*"work" + 0.003*"well" + 0.002*"use"
+2026-01-17 20:25:26,821 - gensim.models.ldamodel - INFO - topic diff=0.030465, rho=0.316228
+2026-01-17 20:25:27,043 - gensim.models.ldamodel - INFO - -8.596 per-word bound, 386.9 perplexity estimate based on a held-out corpus of 500 documents with 36643 words
+2026-01-17 20:25:27,044 - gensim.models.ldamodel - INFO - PROGRESS: pass 9, at document #500/500
+2026-01-17 20:25:27,174 - gensim.models.ldamodel - INFO - topic #0 (0.200): 0.004*"law" + 0.004*"system" + 0.004*"say" + 0.004*"chip" + 0.003*"god" + 0.003*"use" + 0.003*"key" + 0.003*"think" + 0.003*"used" + 0.003*"like"
+2026-01-17 20:25:27,174 - gensim.models.ldamodel - INFO - topic #1 (0.200): 0.005*"det" + 0.004*"people" + 0.004*"nyr" + 0.004*"tor" + 0.004*"file" + 0.004*"bos" + 0.004*"mtl" + 0.003*"new" + 0.003*"chi" + 0.003*"like"
+2026-01-17 20:25:27,175 - gensim.models.ldamodel - INFO - topic #2 (0.200): 0.005*"people" + 0.004*"key" + 0.004*"know" + 0.003*"think" + 0.003*"get" + 0.003*"istanbul" + 0.003*"armenian" + 0.003*"make" + 0.003*"new" + 0.003*"like"
+2026-01-17 20:25:27,175 - gensim.models.ldamodel - INFO - topic #3 (0.200): 0.004*"people" + 0.004*"know" + 0.004*"like" + 0.004*"christian" + 0.004*"jesus" + 0.003*"say" + 0.003*"commandment" + 0.003*"make" + 0.003*"anyone" + 0.003*"get"
+2026-01-17 20:25:27,176 - gensim.models.ldamodel - INFO - topic #4 (0.200): 0.004*"like" + 0.004*"know" + 0.004*"make" + 0.003*"window" + 0.003*"get" + 0.003*"think" + 0.003*"way" + 0.003*"work" + 0.003*"well" + 0.002*"use"
+2026-01-17 20:25:27,176 - gensim.models.ldamodel - INFO - topic diff=0.021878, rho=0.301511
+2026-01-17 20:25:27,176 - gensim.utils - INFO - LdaModel lifecycle event {'msg': 'trained LdaModel<num_terms=9195, num_topics=5, decay=0.5, chunksize=2000> in 4.38s', 'datetime': '2026-01-17T20:25:27.176802', 'gensim': '4.4.0', 'python': '3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]', 'platform': 'Windows-10-10.0.19045-SP0', 'event': 'created'}
+2026-01-17 20:25:32,647 - __main__ - INFO -   Best K: 5
+2026-01-17 20:25:32,648 - __main__ - INFO - 
+======================================================================
+2026-01-17 20:25:32,648 - __main__ - INFO - PIPELINE COMPLETED SUCCESSFULLY!
+2026-01-17 20:25:32,648 - __main__ - INFO - ======================================================================
+2026-01-17 20:25:32,648 - __main__ - INFO - All results saved in: output_20260117_202137
+2026-01-17 20:25:32,649 - __main__ - INFO - Check output_20260117_202137/visualizations/ for plots
+2026-01-17 20:25:32,649 - __main__ - INFO - Check output_20260117_202137/results/ for saved data
+2026-01-17 20:25:32,649 - __main__ - INFO - ======================================================================
