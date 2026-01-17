@@ -6,7 +6,7 @@ import sys
 import os
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'src'))
 
-from pos_analysis import POSAnalyzer
+from src.pos_analysis import POSAnalyzer
 
 class TestPOSAnalyzer(unittest.TestCase):
     def setUp(self):

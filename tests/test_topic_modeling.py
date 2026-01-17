@@ -6,7 +6,7 @@ import sys
 import os
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'src'))
 
-from topic_modeling import TopicModeler
+from src.topic_modeling import TopicModeler
 
 class TestTopicModeling(unittest.TestCase):
     def setUp(self):

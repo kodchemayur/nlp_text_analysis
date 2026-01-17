@@ -6,7 +6,7 @@ import sys
 import os
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'src'))
 
-from ngrams import NGramsAnalyzer
+from src.ngrams import NGramsAnalyzer
 
 class TestNGrams(unittest.TestCase):
     def setUp(self):
