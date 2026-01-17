@@ -61,12 +61,12 @@ nlp_assignment/
 - pip package manager
 
 ### 2. Clone Repository
-```bash
+bash
 git clone [repository-url]
 cd nlp_assignment
 
 ### 3. Install Dependencies
-```bash
+bash
 pip install -r requirements.txt
 
 ### 4. Download NLTK Data
@@ -78,65 +78,35 @@ nltk.download('wordnet')
 nltk.download('averaged_perceptron_tagger')
 
 ### 5. Download spaCy Model
-```bash
+bash
 python -m spacy download en_core_web_sm
 
-##📊 Output & Results
+## 📊 Output & Results
+
 The pipeline generates:
 
-Cleaned corpus (stored as pickle files)
+- Cleaned corpus (stored as pickle files)
 
-N-gram frequency distributions
+- N-gram frequency distributions
 
-POS tag distributions and patterns
+- POS tag distributions and patterns
 
-Topic models with top words
+- Topic models with top words
 
 Visualizations in output_YYYYMMDD_HHMMSS/:
 
-N-gram frequency plots
+- N-gram frequency plots
 
-POS distribution charts
+- POS distribution charts
 
-Topic word clouds
+- Topic word clouds
 
-pyLDAvis interactive visualization
+- pyLDAvis interactive visualization
 
-LDA vs NMF comparison
+- LDA vs NMF comparison
 
-##📁 Dataset
-20 Newsgroups Dataset
+## 📁 Dataset
 
-20,000 newsgroup documents
-
-Organized into 20 categories
-
-Topics: computers, politics, sports, religion, etc.
-
-Minimum 1,000 documents used as required📊 Output & Results
-The pipeline generates:
-
-Cleaned corpus (stored as pickle files)
-
-N-gram frequency distributions
-
-POS tag distributions and patterns
-
-Topic models with top words
-
-Visualizations in output_YYYYMMDD_HHMMSS/:
-
-N-gram frequency plots
-
-POS distribution charts
-
-Topic word clouds
-
-pyLDAvis interactive visualization
-
-LDA vs NMF comparison
-
-📁 Dataset
 20 Newsgroups Dataset
 
 20,000 newsgroup documents
